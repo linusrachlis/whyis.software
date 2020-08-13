@@ -1,0 +1,104 @@
+body {
+    font: 11pt/1.4 'Fira Sans', sans-serif;
+    margin: 1rem;
+    background-color: seashell;
+    color: #444;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+a:visited {
+    color: darkslategrey;
+}
+a:active, a:hover {
+    background-color: black;
+    color: lime;
+    text-decoration: none;
+}
+
+header h1 a,
+header h1 a:visited,
+header h1 a:active,
+header h1 a:hover,
+footer a,
+footer a:visited,
+footer a:active,
+footer a:hover
+{
+    color: lime;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+header h1, section h1 {
+    color: lime;
+    background-color: black;
+    font: 2.5em 'VT323', monospace;
+    padding: 1rem;
+}
+header h1 {
+    margin: -1rem -1rem 0;
+}
+section h1 {
+    margin: 1rem -1rem;
+    font-size: 1.5em;
+}
+
+header .tagline {
+    font: 1.2em 'Fira Code', monospace;
+}
+
+article h1 {
+    font: bold 1.6em 'Fira Sans Condensed', sans-serif;
+}
+article h2 {
+    margin: 1rem -1rem;
+    color: lime;
+    background-color: black;
+    font: 1.5em 'VT323', monospace;
+    padding: .5em;
+}
+
+footer {
+    color: lime;
+    background-color: black;
+    font: 1.5em 'VT323', monospace;
+    padding: 1rem;
+    margin: 1rem -1rem -1rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        margin: 2rem;
+        font-size: 13pt;
+    }
+    header h1 {
+        margin: -2rem -2rem 0;
+        padding: 1rem 2rem;
+    }
+    section h1, article h2 {
+        margin: 2rem -2rem;
+        padding: 1rem 2rem;
+    }
+    footer {
+        margin: 2rem -2rem -2em;
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 14pt;
+    }
+    section, article {
+        width: calc(1024px - 4rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        text-align: center;
+    }
+}
