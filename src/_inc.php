@@ -15,7 +15,7 @@ class T {
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
 </head>

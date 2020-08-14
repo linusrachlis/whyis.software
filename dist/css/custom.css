@@ -1,5 +1,5 @@
 body {
-    font: 11pt/1.4 'Fira Sans', sans-serif;
+    font: 12pt/1.4 'Fira Sans', sans-serif;
     margin: 1rem;
     background-color: seashell;
     color: #444;
@@ -10,7 +10,7 @@ a {
     text-decoration: underline;
 }
 a:visited {
-    color: darkslategrey;
+    color: slategray;
 }
 a:active, a:hover {
     background-color: black;
@@ -47,7 +47,7 @@ section h1 {
 }
 
 header .tagline {
-    font: 1.2em 'Fira Code', monospace;
+    font: bold 1.3em 'Fira Sans Condensed', sans-serif;
 }
 
 article h1 {
@@ -73,7 +73,7 @@ footer {
 @media only screen and (min-width: 768px) {
     body {
         margin: 2rem;
-        font-size: 13pt;
+        font-size: 14pt;
     }
     header h1 {
         margin: -2rem -2rem 0;
@@ -91,7 +91,7 @@ footer {
 
 @media only screen and (min-width: 1024px) {
     body {
-        font-size: 14pt;
+        font-size: 16pt;
     }
     section, article {
         width: calc(1024px - 4rem);
