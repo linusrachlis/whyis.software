@@ -60,6 +60,9 @@ article h2 {
     font: 1.5em 'VT323', monospace;
     padding: .5em;
 }
+article blockquote {
+    font-size: 90%;
+}
 
 footer {
     color: lime;
