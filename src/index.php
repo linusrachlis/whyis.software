@@ -14,6 +14,7 @@
         <ul>
             <li><a href="/cookies.html">What are cookies, and why does every website make me agree to them?</a></li>
             <li><em>Coming soon:</em> Why do I use some apps through a web browser and others have to be installed?</li>
+            <li><em>Coming soon:</em> Password strength, two-factor authentication, not re-using passwords. Why do these matter?</li>
             <li><em>Coming soon:</em> I upgraded to Mac OS Catalina and can't use 32-bit apps anymore. What does that mean?</li>
             <li><em>Coming soon:</em> Computers are 1000 times as powerful as early PCs were, right? Why do they often still feel slow?</li>
             <li><a href="mailto:ask@whyis.software">Email a question</a></li>
