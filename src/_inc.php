@@ -1,6 +1,21 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
+use Michelf\Markdown, Michelf\SmartyPants;
+
 class T {
+    function markdown_begin() {
+        ob_start();
+    }
+
+    function markdown_end() {
+        $input = ob_get_clean();
+        $output = Markdown::defaultTransform($input);
+        $output = SmartyPants::defaultTransform($output);
+        echo $output;
+    }
+
     function head($title = null) {
         ?>
 <!DOCTYPE html>
