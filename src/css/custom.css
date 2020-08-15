@@ -13,7 +13,8 @@ a:visited {
     color: slategray;
 }
 a:active, a:hover {
-    background-color: black;
+    background: black;
+    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
     color: lime;
     text-decoration: none;
 }
@@ -34,7 +35,8 @@ footer a:hover
 
 header h1, section h1 {
     color: lime;
-    background-color: black;
+    background: black;
+    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
     font: 2.5em 'VT323', monospace;
     padding: 1rem;
 }
@@ -56,7 +58,8 @@ article h1 {
 article h2 {
     margin: 1rem -1rem;
     color: lime;
-    background-color: black;
+    background: black;
+    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
     font: 1.5em 'VT323', monospace;
     padding: .5em;
 }
