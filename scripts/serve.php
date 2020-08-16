@@ -1,12 +1,6 @@
 <?php
 
-$src_dir = __DIR__ . '/../src';
-$dist_dir = __DIR__ . '/../dist';
-
-$pages = [
-    'index',
-    'cookies',
-];
+require __DIR__ . '/config.php';
 
 if ($_SERVER['REQUEST_URI'] == '/') {
     $request_uri = '/index.html';
@@ -16,19 +10,14 @@ if ($_SERVER['REQUEST_URI'] == '/') {
 
 foreach ($pages as $page) {
     if ($request_uri == "/$page.html") {
-        require $src_dir . '/_inc.php';
-        require $src_dir . '/' . $page . '.php';
+        require "$src_dir/_inc.php";
+        require "$src_dir/$page.php";
         exit;
     }
 }
 
 if ($request_uri == '/style.css') {
     header('Content-type: text/css');
-    $css_files = [
-        'normalize',
-        'main',
-        'custom',
-    ];
     foreach ($css_files as $css_file) {
         readfile("$src_dir/css/$css_file.css");
         echo PHP_EOL;

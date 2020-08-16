@@ -1,30 +1,20 @@
 <?php
 
-$pages = [
-    'index',
-    'cookies',
-];
+require __DIR__ . '/config.php';
 
-$css_files = [
-    'normalize',
-    'main',
-    'custom',
-];
-
-$src_dir = __DIR__ . '/../src';
 $dist_dir = __DIR__ . '/../dist';
 
 if (!is_dir($dist_dir)) {
     mkdir($dist_dir);
 }
 
-require $src_dir . '/_inc.php';
+require "$src_dir/_inc.php";
 
 foreach ($pages as $page) {
     ob_start();
-    require $src_dir . '/' . $page . '.php';
+    require "$src_dir/$page.php";
     $output = ob_get_clean();
-    file_put_contents($dist_dir . '/' . $page . '.html', $output);
+    file_put_contents("$dist_dir/$page.html", $output);
 }
 
 $css_code = '';
