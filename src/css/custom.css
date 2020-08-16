@@ -108,3 +108,10 @@ footer {
         text-align: center;
     }
 }
+
+ul.articles li {
+    margin: .5em 0;
+}
+ul.articles li a {
+    font-weight: bold;
+}
