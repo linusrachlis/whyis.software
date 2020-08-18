@@ -23,23 +23,16 @@ viewed, etc.
 
 Websites have used cookies exuberantly for decades, but in 2018 the EU
 passed new privacy laws that have been widely interpreted to require
-websites to obtain consent for the usage of most cookies. Most websites
-are globally available, and therefore available to EU citizens, and
-therefore subject to these laws. This has resulted in yet another pop-up
-we all have to dismiss or ignore to get at the actual website we came to
-visit, without becoming genuinely informed or giving meaningful consent.
-(The confusing nature of the laws themselves is not helpful, although
-they are well-meaning, and are about much more than just cookies. For
-more, see the [official word](https://gdpr.eu/cookies/) and an
-[unofficial interpretive
-article](https://www.varonis.com/blog/differences-between-the-gdpr-and-privacy-directive/).)
+consent for the usage of most cookies. Most websites are globally
+available, and therefore available to EU citizens, and therefore subject
+to these laws. This has resulted in yet another pop-up we all have to
+dismiss or ignore to get at the actual website we came to visit, without
+becoming genuinely informed or giving meaningful consent.
 
-It's worth noting that we've always had the option to disable cookies
-(i.e., to tell one's browser to ignore websites' requests to store
-data), but in that case many websites just won't work. Like Javascript,
-cookies began as an optional feature that could enhance a website's
-functionality. But due to the free evolution of the web, features
-designed as optional in theory often become mandatory in practice.
+(The new laws do seems well-meaning, and are about much more than just
+cookies. For more, see the [official word](https://gdpr.eu/cookies/) and
+an [unofficial interpretive
+article](https://www.varonis.com/blog/differences-between-the-gdpr-and-privacy-directive/).)
 
 <?php T::markdown_end() ?>
 
@@ -211,13 +204,73 @@ you may remember from such shows as Mr. Robot.
 
         </details>
 
+        <h2>Okay wise guy, if the new cookie popups don&rsquo;t result in genuine informed consent, what would be better?</h2>
+
+        <details>
+
+<?php T::markdown_begin() ?>
+
+Historically, cookies were always a matter of consent. Even today, when
+you visit, say, some news outlet's website, your browser (a program
+running on your computer) has a conversation with a server (a program
+running on a remote computer). It goes something like this:
+
+> **Browser:** Hi `action-news-world.com`, I guess my user is in the mood
+> for sadness, because they're requesting the international news page.
+> Please send that over.
+
+> **Server:** Kinda busy here, hold on ... OK, got that page for you.
+> Also, can you hold these for me?
+
+> * `visitor ID = ABC123`
+> * `country code = CA`
+> * `free articles viewed = 0`
+
+> That's just a couple pieces of information to serve your user better.
+> If you could present them on every visit for the next four years,
+> that'd be great. OK, here's the international news page. Hope your
+> user is ready for a deep funk. `<data stream follows>`
+
+> **Browser:** Hmm. I'm not sure if tracking "free articles viewed" is
+> really about serving my user better, but as a computer program, it's
+> pretty hard for me to tell. For all I know, it's essential
+> functionality. OK, I'll do as you say. By the way, surely some
+> positive things are happening internationally as well as sad things?
+
+> **Server:** I mean, probably ... I just don't consider them news,
+> though.
+
+See that? If your browser refused to accept the cookies, there is
+nothing the website could do to force the issue. It can't block the
+browser for refusing the cookies, because the cookies are the only
+reliable way to recognize the same browser coming back!
+
+In fact, all browsers have a setting you can toggle to refuse cookies,
+but it defaults to "accept," because many websites just won't work
+properly without cookies. And for the most part, it's not possible for
+your browser to be selective, because there's no way for it to tell
+which cookies are in your interest and which are against. That all
+depends how the website uses the data, and your browser is not a
+mind-reader.
+
+the problem is basically no one does this part: Allow users to access your service even if they refuse to allow the use of certain cookies
+
+it's just "by conitnuing you accept" and it's all or nothing.
+
+1) it'd be stupid for each website to build its own interface for deciding
+what types of cookies to accept
+2) in order for the choice to be made in your browser, we'd need a new standard
+for announcing the type of each cookie, and legal force to require truthful use of it.
+3) cookies are no longer the only way to store data client-side
+
+<?php T::markdown_end() ?>
+
+        </details>
+
         <h2>My browser gives the option to block third-party cookies. What does that mean, and why would I want to?</h2>
 
         <p>Coming soon...</p>
 
-        <h2>Okay wise guy, if the current cookie popups don&rsquo;t result in genuine informed consent, what would be better?</h2>
-
-        <p>Coming soon...</p>
     </article>
 <?php
 T::foot();
