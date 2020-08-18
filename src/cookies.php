@@ -2,12 +2,12 @@
 T::head('What are cookies, and why does every website make me agree to them?');
 ?>
 
-    <header>
-        <h1><a href="/">Why is software?</a></h1>
-    </header>
-
     <article>
-        <h1>What are cookies, and why does every website make me agree to them?</h1>
+        <div class=header>
+            <div class=home-link><a href="/">Why is software?</a> &raquo;</div>
+            <h1>What are cookies, and why does every website make me agree to them?</h1>
+        </div>
+        <div class=content>
 
 <?php T::markdown_begin() ?>
 
@@ -271,6 +271,7 @@ for announcing the type of each cookie, and legal force to require truthful use 
 
         <p>Coming soon...</p>
 
+        </div>
     </article>
 <?php
 T::foot();

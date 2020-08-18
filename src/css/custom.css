@@ -23,17 +23,21 @@ header h1 a,
 header h1 a:visited,
 header h1 a:active,
 header h1 a:hover,
+.header a,
+.header a:visited,
+.header a:active,
+.header a:hover,
 footer a,
 footer a:visited,
 footer a:active,
 footer a:hover
 {
     color: lime;
-    background-color: transparent;
+    background: transparent;
     text-decoration: underline;
 }
 
-header h1, section h1 {
+header h1, section h1, article .header {
     color: lime;
     background: black;
     background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
@@ -50,14 +54,20 @@ section h1 {
     margin: 1rem -1rem;
     font-size: 1.5em;
 }
+article .header {
+    margin: -1rem -1rem 0;
+}
+article .header .home-link {
+    font-size: 1.25em;
+}
+article .header h1 {
+    font-weight: normal;
+}
 
 header .tagline {
     font: 1.3em 'Fira Code', sans-serif;
 }
 
-article h1 {
-    font: bold 1.6em 'Fira Sans Condensed', sans-serif;
-}
 article h2 {
     margin: 1rem -1rem;
     color: lime;
@@ -85,7 +95,7 @@ footer {
         margin: 2rem;
         font-size: 14pt;
     }
-    header h1 {
+    header h1, article .header {
         margin: -2rem -2rem 0;
         padding: 1rem 2rem;
     }
@@ -103,12 +113,12 @@ footer {
     body {
         font-size: 16pt;
     }
-    section, article {
+    section, article .content {
         width: calc(1024px - 4rem);
         margin-left: auto;
         margin-right: auto;
     }
-    header {
+    header, article .header {
         text-align: center;
     }
 }
