@@ -12,7 +12,7 @@
         <h1>Articles</h1>
 
         <ul class=articles>
-            <li><a href="/cookies.html">What are cookies, and why does every website make me agree to them?</a></li>
+            <li><a href="/cookies/">What are cookies, and why does every website make me agree to them?</a></li>
             <li><em>Coming soon:</em> Why do I use some apps through a web browser and others have to be installed?</li>
             <li><em>Coming soon:</em> Password strength, two-factor authentication, not re-using passwords. Why do these matter?</li>
             <li><em>Coming soon:</em> I upgraded to Mac OS Catalina and can't use 32-bit apps anymore. What does that mean?</li>

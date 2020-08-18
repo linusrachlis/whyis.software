@@ -14,7 +14,12 @@ foreach ($pages as $page) {
     ob_start();
     require "$src_dir/$page.php";
     $output = ob_get_clean();
-    file_put_contents("$dist_dir/$page.html", $output);
+    $output_path = "$dist_dir/$page.html";
+    $output_dir = dirname($output_path);
+    if (!is_dir($output_dir)) {
+        mkdir($output_dir, 0777, true); // recursive
+    }
+    file_put_contents($output_path, $output);
 }
 
 $css_code = '';

@@ -2,10 +2,10 @@
 
 require __DIR__ . '/config.php';
 
-if ($_SERVER['REQUEST_URI'] == '/') {
-    $request_uri = '/index.html';
-} else {
-    $request_uri = $_SERVER['REQUEST_URI'];
+$request_uri = $_SERVER['REQUEST_URI'];
+
+if (substr($_SERVER['REQUEST_URI'], -1) == '/') {
+    $request_uri .= 'index.html';
 }
 
 foreach ($pages as $page) {

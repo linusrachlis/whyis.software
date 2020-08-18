@@ -11,9 +11,19 @@ class T {
 
     function markdown_end() {
         $input = ob_get_clean();
-        $output = Markdown::defaultTransform($input);
-        $output = SmartyPants::defaultTransform($output);
+        $output = self::markdown_to_html($input);
         echo $output;
+    }
+
+    function markdown_to_html($input) {
+        $output = Markdown::defaultTransform($input);
+        $output = self::typograph($output);
+        return $output;
+    }
+
+    function typograph($input) {
+        $output = SmartyPants::defaultTransform($input);
+        return $output;
     }
 
     function head($title = null) {
@@ -22,7 +32,7 @@ class T {
 <html>
 
 <head>
-    <title><?= isset($title) ? $title . ' - ' : '' ?>Why is software?</title>
+    <title><?= isset($title) ? self::typograph($title) . ' - ' : '' ?>Why is software?</title>
     <meta charset="utf-8">
     <meta name="description" content="Opinionated answers for the non-technical tech-curious">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,15 +45,41 @@ class T {
         <?php
     }
 
-    function foot($show_footer = true) {
-        if ($show_footer) {
-            ?>
+    function article_head($article_title, array $breadcrumbs = []) {
+        ?>
 
-    <footer>
-        <a href="/">&lt; Return Home</a>
-    </footer>
-            <?php
-        }
+    <article>
+        <div class=header>
+            <div class=breadcrumbs>
+                <a href="/">Why is software?</a> &raquo;
+                <?php foreach ($breadcrumbs as $url => $title): ?>
+
+                <a href="<?= $url ?>"><?= self::typograph($title) ?></a> &raquo;
+                <?php endforeach ?>
+            </div>
+            <h1><?= self::typograph($article_title) ?></h1>
+        </div>
+        <div class=content>
+        <?php
+    }
+
+    function article_foot(array $backlinks = []) {
+        ?>
+
+            </div>
+        </article>
+
+        <footer>
+            <?php foreach ($backlinks as $url => $title): ?>
+
+            <p>&lt; <a href="<?= $url ?>"><?= self::typograph($title) ?></a></p>
+            <?php endforeach ?>
+            <p>&lt; <a href="/">Return home</a></p>
+        </footer>
+        <?php
+    }
+
+    function foot() {
         ?>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

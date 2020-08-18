@@ -2,7 +2,10 @@
 
 $pages = [
     'index',
-    'cookies',
+    'cookies/index',
+    'cookies/websites-and-memory',
+    'cookies/anonymous',
+    'cookies/consent',
 ];
 
 $css_files = [

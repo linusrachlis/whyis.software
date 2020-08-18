@@ -1,47 +1,10 @@
 <?php
-T::head('What are cookies, and why does every website make me agree to them?');
+$title = 'Why does my browser have to present the same data again on every visit? Can\'t the website just remember who I am?';
+T::head($title);
+T::article_head($title, ['/cookies/' => 'What are cookies?']);
 ?>
 
-    <article>
-        <div class=header>
-            <div class=home-link><a href="/">Why is software?</a> &raquo;</div>
-            <h1>What are cookies, and why does every website make me agree to them?</h1>
-        </div>
-        <div class=content>
-
 <?php T::markdown_begin() ?>
-
-Any website you visit can request that your computer store some data,
-and for silly reasons the technical term for this data is "cookie." The
-data can be anything, and for a set time, your computer will present the
-stored data back to the website on subsequent visits. A cookie is often
-just a random number that's used to identify you during your visit, and
-match you up with your profile data permanently stored on the website.
-But in principle, a cookie can be anything, such as preferences you've
-selected (e.g. Celsius vs. Fahrenheit), number of free articles you've
-viewed, etc.
-
-Websites have used cookies exuberantly for decades, but in 2018 the EU
-passed new privacy laws that have been widely interpreted to require
-consent for the usage of most cookies. Most websites are globally
-available, and therefore available to EU citizens, and therefore subject
-to these laws. This has resulted in yet another pop-up we all have to
-dismiss or ignore to get at the actual website we came to visit, without
-becoming genuinely informed or giving meaningful consent.
-
-(The new laws do seems well-meaning, and are about much more than just
-cookies. For more, see the [official word](https://gdpr.eu/cookies/) and
-an [unofficial interpretive
-article](https://www.varonis.com/blog/differences-between-the-gdpr-and-privacy-directive/).)
-
-<?php T::markdown_end() ?>
-
-        <h2>Why does my browser have to present the same data again on every visit? Can’t the website just
-            remember who I am?</h2>
-
-        <details>
-
-        <?php T::markdown_begin() ?>
 
 This may seem strange. Maybe you're imagining a real-life analogy where
 you've met someone at a party who is having short-term memory trouble,
@@ -167,111 +130,8 @@ website. It would be too complicated to have one way that busy websites
 work and another way for non-busy websites, so instead we all use the
 way that will keep working no matter how busy a website gets.
 
-        <?php T::markdown_end() ?>
-
-        </details>
-
-        <h2>If cookies can be used to identify me, can I be anonymous if I disable cookies?</h2>
-
-        <p>(Short answer: no.)</p>
-
-        <details>
-
-        <?php T::markdown_begin() ?>
-
-If you use a regular web browser, you are never truly anonymous no
-matter what settings you use. Cookies provide a reliable way for a
-website to remember who you are, but there are many other quasi-reliable
-ways. This means if you disable cookies, a website can't be absolutely
-sure who you are, but you're still far from anonymous.
-
-A website you visit still receives a lot of information other than
-cookies, the combination of which can still uniquely identify you. Just
-like if you don't wear your lanyard with the barcode, you're probably
-still recognizable by your face or your clothing. Without accepting
-cookies, you may lose the ability to log into the website, but you may
-still be trackable for, e.g., advertising purposes. Advertisers are
-comfortable with a 95% probability of your identity, whereas a login
-system needs certainty.
-
-Finally, if your internet service provider (e.g. Rogers) receives a
-court order, or if you live under an oppressive government, any internet
-activity can be traced back to the physical location you connected from.
-The only way around this is to use software like the Tor browser, which
-you may remember from such shows as Mr. Robot.
-
-        <?php T::markdown_end() ?>
-
-        </details>
-
-        <h2>Okay wise guy, if the new cookie popups don&rsquo;t result in genuine informed consent, what would be better?</h2>
-
-        <details>
-
-<?php T::markdown_begin() ?>
-
-Historically, cookies were always a matter of consent. Even today, when
-you visit, say, some news outlet's website, your browser (a program
-running on your computer) has a conversation with a server (a program
-running on a remote computer). It goes something like this:
-
-> **Browser:** Hi `action-news-world.com`, I guess my user is in the mood
-> for sadness, because they're requesting the international news page.
-> Please send that over.
-
-> **Server:** Kinda busy here, hold on ... OK, got that page for you.
-> Also, can you hold these for me?
-
-> * `visitor ID = ABC123`
-> * `country code = CA`
-> * `free articles viewed = 0`
-
-> That's just a couple pieces of information to serve your user better.
-> If you could present them on every visit for the next four years,
-> that'd be great. OK, here's the international news page. Hope your
-> user is ready for a deep funk. `<data stream follows>`
-
-> **Browser:** Hmm. I'm not sure if tracking "free articles viewed" is
-> really about serving my user better, but as a computer program, it's
-> pretty hard for me to tell. For all I know, it's essential
-> functionality. OK, I'll do as you say. By the way, surely some
-> positive things are happening internationally as well as sad things?
-
-> **Server:** I mean, probably ... I just don't consider them news,
-> though.
-
-See that? If your browser refused to accept the cookies, there is
-nothing the website could do to force the issue. It can't block the
-browser for refusing the cookies, because the cookies are the only
-reliable way to recognize the same browser coming back!
-
-In fact, all browsers have a setting you can toggle to refuse cookies,
-but it defaults to "accept," because many websites just won't work
-properly without cookies. And for the most part, it's not possible for
-your browser to be selective, because there's no way for it to tell
-which cookies are in your interest and which are against. That all
-depends how the website uses the data, and your browser is not a
-mind-reader.
-
-the problem is basically no one does this part: Allow users to access your service even if they refuse to allow the use of certain cookies
-
-it's just "by conitnuing you accept" and it's all or nothing.
-
-1) it'd be stupid for each website to build its own interface for deciding
-what types of cookies to accept
-2) in order for the choice to be made in your browser, we'd need a new standard
-for announcing the type of each cookie, and legal force to require truthful use of it.
-3) cookies are no longer the only way to store data client-side
-
 <?php T::markdown_end() ?>
 
-        </details>
-
-        <h2>My browser gives the option to block third-party cookies. What does that mean, and why would I want to?</h2>
-
-        <p>Coming soon...</p>
-
-        </div>
-    </article>
 <?php
+T::article_foot(['/cookies/#sub-questions' => "Other sub-questions"]);
 T::foot();

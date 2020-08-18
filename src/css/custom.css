@@ -57,11 +57,13 @@ section h1 {
 article .header {
     margin: -1rem -1rem 0;
 }
-article .header .home-link {
+article .header .breadcrumbs {
     font-size: 1.25em;
 }
 article .header h1 {
     font-weight: normal;
+    margin: 1rem 0;
+    font-size: 2em;
 }
 
 header .tagline {
@@ -85,9 +87,11 @@ footer {
     background: black;
     background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
     font: 1.5em 'VT323', monospace;
-    padding: 1rem;
+    padding: .5rem 1rem;
     margin: 1rem -1rem -1rem;
-    text-align: center;
+}
+footer p {
+    margin: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -119,6 +123,9 @@ footer {
         margin-right: auto;
     }
     header, article .header {
+        text-align: center;
+    }
+    footer {
         text-align: center;
     }
 }
