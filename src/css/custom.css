@@ -58,16 +58,23 @@ header .tagline {
 article h1 {
     font: bold 1.6em 'Fira Sans Condensed', sans-serif;
 }
-article h2 {
+article details summary {
     margin: 1rem -1rem;
     color: lime;
     background: black;
     background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
-    font: 1.5em 'VT323', monospace;
     padding: .5em;
+    cursor: pointer;
+}
+article details summary h2 {
+    font: 1.5em 'VT323', monospace;
+    display: inline;
 }
 article blockquote {
     font-size: 90%;
+}
+article code {
+    font-family: 'Fira Code', monospace;
 }
 
 footer {
