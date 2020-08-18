@@ -23,7 +23,7 @@
     </section>
 
     <section>
-        <h1>About</h1>
+        <h1>Why is this website?</h1>
         <?php T::markdown_begin() ?>
 
 When I first used a computer, I felt uncertainty and awe. This was an
