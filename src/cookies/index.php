@@ -6,23 +6,27 @@ T::article_head($title);
 
 <?php T::markdown_begin() ?>
 
-Any website you visit can request that your computer store some data,
-and for silly reasons the technical term for this data is "cookie." The
-data can be anything, and for a set time, your computer will present the
-stored data back to the website on subsequent visits. A cookie is often
-just a random number that's used to identify you during your visit, and
-match you up with your profile data permanently stored on the website.
-But in principle, a cookie can be anything, such as preferences you've
-selected (e.g. Celsius vs. Fahrenheit), number of free articles you've
-viewed, etc.
+Any website you visit can request that your computer store some data for
+later use by the same site. Modern web browsers provide a few mechanisms
+for this, but the oldest and most common is referred to as a "cookie,"
+in the whimsical style of software jargon.
+
+The data can be anything, and for a set time, your computer will present
+the stored data back to the website on subsequent visits. Often, a
+cookie is just a random number that's used to identify you during your
+visit, and match you up with your profile data permanently stored on the
+website. But in principle, a cookie can be anything, such as preferences
+you've selected (e.g. Celsius vs. Fahrenheit), number of free articles
+you've viewed, etc.
 
 Websites have used cookies exuberantly for decades, but in 2018 the EU
 passed new privacy laws that have been widely interpreted to require
-consent for the usage of most cookies. Most websites are globally
-available, and therefore available to EU citizens, and therefore subject
-to these laws. This has resulted in yet another pop-up we all have to
-dismiss or ignore to get at the actual website we came to visit, without
-becoming genuinely informed or giving meaningful consent.
+consent for the usage of most cookies and other ways of storing data on
+visitors' computers. Most websites are globally available, and therefore
+available to EU citizens, and therefore subject to these laws. This has
+resulted in yet another pop-up we all have to dismiss or ignore to get
+at the actual website we came to visit, without becoming genuinely
+informed or giving meaningful consent.
 
 (The new laws do seems well-meaning, and are about much more than just
 cookies. For more, see the [official word](https://gdpr.eu/cookies/) and
