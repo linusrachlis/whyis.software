@@ -43,7 +43,7 @@ for its own good and for the public good. This requires demystification.
 This website is for folks who don't make software, but often wonder
 about it. It's such a big part of your life, you deserve some
 explanation. For each question, I give a high-level answer followed by
-more questions you can expand, depending where you're interested in
+sub-questions you can visit, depending where you're interested in
 diving deeper.
 
 I'm a software developer in Toronto, ON, Canada. You can also find me at
