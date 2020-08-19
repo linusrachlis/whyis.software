@@ -151,16 +151,22 @@ work, for a few reasons.
   like to be in control of that data, and have it live with them.
 
 Websites with such ambitions will set a cookie that just holds a large
-random number. Your computer presents this unique random number again on
-every visit, and the computer running the website can use it to look up
-your information in an internal database (and add to it) before deciding
-how to serve you. You may or may not have to enter a password to
-interact with your profile information, depending on the nature of the
-website. In the food catering analogy, this is like having a barcode on
-your lanyard instead of actual information. The catering staff can scan
-the barcode to pull up your profile, which could now be extensive
-because it doesn't have to fit on a little card; all that needs to fit
-is the barcode (representing a unique number).
+random number:
+
+<pre style="clear: right;">
+ID = b94d27b9934d3e08...
+</pre>
+
+Your computer presents this unique random number again on every visit,
+and the computer running the website can use it to look up your
+information in an internal database (and add to it) before deciding how
+to serve you. You may or may not have to enter a password to interact
+with your profile information, depending on the nature of the website.
+In the food catering analogy, this is like having a barcode on your
+lanyard instead of actual information. The catering staff can scan the
+barcode to pull up your profile, which could now be extensive because it
+doesn't have to fit on a little card; all that needs to fit is the
+barcode (representing a unique number).
 
 Of course, another strategy would be to simply hire as many staff as
 attendees, so that each staff member only has to remember one person's
