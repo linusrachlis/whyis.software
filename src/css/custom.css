@@ -91,7 +91,8 @@ article pre {
     font-family: 'Fira Code', monospace;
     color: white;
     text-shadow: rgba(255,255,255,.5) 0 0 .33em;
-    background: rgba(3,73,0,1);
+    background: black;
+    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
     padding: 1em;
     white-space: pre-wrap;
 }
