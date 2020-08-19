@@ -83,6 +83,40 @@ article h2 {
 article blockquote {
     font-size: 90%;
 }
+article code {
+    font-family: 'Fira Code', monospace;
+}
+article pre {
+    font-size: 90%;
+    font-family: 'Fira Code', monospace;
+    color: white;
+    text-shadow: rgba(255,255,255,.5) 0 0 .33em;
+    background: rgba(3,73,0,1);
+    padding: 1em;
+    white-space: pre-wrap;
+}
+article aside {
+    border-top: 2px dashed #888;
+    border-bottom: 2px dashed #888;
+    padding: 1em;
+    margin: 1em 0;
+}
+article aside h3 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin: .5em 0;
+}
+article aside ol {
+    margin: .5em 0;
+    padding: 0 0 0 1.5em;
+}
+article aside :first-child {
+    margin-top: 0;
+}
+article aside :last-child {
+    margin-bottom: 0;
+}
 
 footer {
     color: lime;
@@ -109,6 +143,14 @@ footer p {
     section h1, article h2 {
         margin: 2rem -2rem;
         padding: 1rem 2rem;
+    }
+    article aside {
+        border-left: 2px dashed #888;
+        border-radius: 1em;
+        float: right;
+        width: 40%;
+        margin-left: 2em;
+        font-size: 90%;
     }
     footer {
         margin: 2rem -2rem -2em;

@@ -37,6 +37,8 @@ and are having a surreal conversation:
 >
 > **Me:** 🤦‍♂️
 
+## Some quick history
+
 The thing is, a one-on-one conversation isn't a great analogy for
 information flow when it comes to websites. Let's recall the web's
 original purpose: It's 1989. For most people, personal computers still
@@ -73,19 +75,37 @@ creators want to be able to analyze which pages I visited, in what
 order, for how long -- ostensibly so they can improve my experience.
 This requires my having a continuous identity from page to page.
 
+## How cookies are used
+
 If a website has only a small amount of data to store, the simplest way
-is to put it in the cookie itself. If a website sets two cookies, "temp
-unit = C" and "font size = 18," my browser will no longer merely say
-"send me document A." It will now say "send me document A, and by the
-way, temp unit = C and font size = 18." And then, "send me document *B*,
-and by the way, temp unit = C and font size = 18." This is like being at
-an event with catered food, and wearing a lanyard with the code "VGN,
-GF, AP." This could efficiently tell the catering staff that you are
-vegan and gluten-intolerant with a peanut allergy, without their having
-to re-interview you on every interaction. They still don't know who you
-are individually, but you constantly present all the information they
-need. Websites may use this strategy to store minor customizations and
-preferences.
+is to put it in the cookie itself. Suppose you set some preferences on a
+website, and in order to remember them, the website sets two cookies:
+
+<pre>
+temp unit = C
+font size = 18
+</pre>
+
+Now my browser will no longer merely say "send me document A." It will
+now say:
+
+<pre>
+Send me document A, and by the way, temp unit = C and font size = 18.
+</pre>
+
+And then,
+
+<pre>
+Send me document <strong><em>B</em></strong>, and by the way, temp unit = C and font size = 18.
+</pre>
+
+This is like being at an event with catered food, and wearing a lanyard
+with the code "VGN, GF, AP." This could efficiently tell the catering
+staff that you are vegan and gluten-intolerant with a peanut allergy,
+without their having to re-interview you on every interaction. They
+still don't know who you are individually, but you constantly present
+all the information they need. Websites may use this strategy to store
+minor customizations and preferences.
 
 Nowadays, "documents on demand" describes only a narrow aspect of the
 web. A more general description of the modern web would be "software as
@@ -95,27 +115,52 @@ post comments, and serve them ads. Obviously, many modern websites care
 a great deal who each visitor is, and serve each visitor a personalized
 experience. So, in contrast to the original design of the web, aspect
 (2) is no longer true. But with more and more activities moving online,
-aspect (1) is more true than ever.
+aspect (1) is more true than ever (see aside).
 
-If a website wants to build up extensive profile data for each visitor,
-storing this data in the cookie itself won't work. First, because
-cookies are limited in size, to protect visitors' hard drive space.
-Second, each computer stores its own set of cookies. If you use your
-phone instead of your laptop, the same cookies will not be sent. Third,
-visitors can choose to delete cookies any time, destroying the data. If
-a website bothers to accumulate profile data on you, they would like to
-be in control of that data, and have it live with them. In this case,
-the website will set a cookie that just holds a large random number.
-Your computer presents this unique random number again on every visit,
-and the computer running the website can use it to look up your
-information in an internal database (and add to it) before deciding how
-to serve you. You may or may not have to enter a password to interact
-with your profile information, depending on the nature of the website.
-In the food catering analogy, this is like having a barcode on your
-lanyard instead of actual information. The catering staff can scan the
-barcode to pull up your profile, which could now be extensive because it
-doesn't have to fit on a little card; all that needs to fit is the
-barcode (representing a unique number).
+<aside>
+    <h3>Web 1.0</h3>
+    <ol>
+        <li>A website has a one-to-many relationship with visitors.</li>
+        <li>A website is a repository of documents. For the most part, any
+        visitor requesting the same document will be served in the same way.</li>
+    </ol>
+
+    <h3>Web 2.0</h3>
+    <ol>
+        <li>
+            A website has a one-to-many relationship with visitors.
+            ✅ <em>Oh yeah, double down on this, the more visitors the better</em>
+        </li>
+        <li>
+            <del>A website is a repository of documents. For the most part, any
+            visitor requesting the same document will be served in the same way.</del>
+            ❌❌❌ <em>Nope we are too hip for this now, documents are programs, rock on postmodernity</em> 🤘
+        </li>
+    </ol>
+</aside>
+
+In this situation, where websites may want to build up extensive profile
+data for each visitor, storing this data in the cookie itself won't
+work, for a few reasons.
+
+* Cookies are limited in size, to protect visitors' hard drive space.
+* Each computer stores its own set of cookies. If you use your phone
+  instead of your laptop, the same cookies will not be sent.
+* Visitors can choose to delete cookies any time, destroying the data.
+  If a website bothers to accumulate profile data on you, they would
+  like to be in control of that data, and have it live with them.
+
+Websites with such ambitions will set a cookie that just holds a large
+random number. Your computer presents this unique random number again on
+every visit, and the computer running the website can use it to look up
+your information in an internal database (and add to it) before deciding
+how to serve you. You may or may not have to enter a password to
+interact with your profile information, depending on the nature of the
+website. In the food catering analogy, this is like having a barcode on
+your lanyard instead of actual information. The catering staff can scan
+the barcode to pull up your profile, which could now be extensive
+because it doesn't have to fit on a little card; all that needs to fit
+is the barcode (representing a unique number).
 
 Of course, another strategy would be to simply hire as many staff as
 attendees, so that each staff member only has to remember one person's
