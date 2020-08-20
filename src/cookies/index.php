@@ -40,7 +40,7 @@ article](https://www.varonis.com/blog/differences-between-the-gdpr-and-privacy-d
         <ul class=articles>
             <li><a href="websites-and-memory.html">Why does my browser have to present the same data again on every visit? Can’t the website just remember who I am?</a></li>
             <li><a href="anonymous.html">If cookies can be used to identify me, can I be anonymous if I disable cookies?</a><br>(Short answer: no.)</li>
-            <li><a href="consent.html">Okay wise guy, if the new cookie popups don&rsquo;t result in genuine informed consent, what would be better?</a></li>
+            <li><a href="consent.html">If the new cookie popups don&rsquo;t result in genuine informed consent, what would be better?</a></li>
             <li><em>Coming soon:</em> My browser gives the option to block third-party cookies. What does that mean, and why would I want to?</li>
         </ul>
 
