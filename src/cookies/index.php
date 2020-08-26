@@ -19,11 +19,12 @@ website. But in principle, a cookie can be anything, such as preferences
 you've selected (e.g. Celsius vs. Fahrenheit), number of free articles
 you've viewed, etc.
 
-Websites have used cookies exuberantly for decades, but in 2018 the EU
-passed new privacy laws that require visitors' consent for the use of
-most cookies and other ways of storing data on visitors' computers. Most
-websites are globally available, and therefore available to EU citizens,
-and therefore subject to these laws.
+Websites have used cookies exuberantly since the 1990s, but in the new
+century, various European legislative bodies have been busy passing
+digital privacy laws that (among other things) affect the use of cookies
+and other ways of storing data on visitors' computers. Most websites are
+globally available, and therefore available to EU citizens, and
+therefore subject to these laws.
 
 The most noticeable result -- especially when browsing from the EU -- is
 yet another layer of pop-ups and legalese for website visitors to wade
@@ -49,9 +50,11 @@ data, especially since most websites have countervailing incentives.
 
 ## Further reading
 
-For more on the legislation itself (which is about much more than just
-cookies), see the [official word](https://gdpr.eu/cookies/) and an
-[unofficial interpretive
+The most well-known piece of new legislation is 2018's GDPR (General
+Data Protection Regulation). For more on the legislation itself (which
+is about much more than just cookies), see the
+[official word](https://gdpr.eu/cookies/) and an [unofficial
+interpretive
 article](https://www.varonis.com/blog/differences-between-the-gdpr-and-privacy-directive/).
 
 For a great survey and discussion of the various design approaches to

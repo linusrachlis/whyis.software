@@ -62,12 +62,12 @@ browser is not a mind-reader.
 So for any given website, we've been stuck with all-or-nothing consent
 for cookies. This was OK back in the day when cookies just provided
 bonus enhancement features. But now that they often provide essential
-functionality, the only way not to consent
-is not to visit the site at all.
+functionality, the only way not to consent is not to visit the site at
+all.
 
-It seems like this is where the EU's new laws were supposed to come in.
-As [described here](https://gdpr.eu/cookies/), they contain two key
-concepts that would improve the above situation:
+The GDPR (the EU's 2018 digital privacy law) has a lot to say about
+cookies, as [described here](https://gdpr.eu/cookies/). It contains two
+key concepts that would improve the above situation:
 
 1. Distinguish "strictly necessary" cookies (i.e. essential website
    functionality) from other kinds of cookies (e.g. free article
@@ -75,13 +75,24 @@ concepts that would improve the above situation:
 2. "Allow users to access your service even if they refuse to allow the
    use of certain cookies."
 
-Now when's the last time you saw a cookie consent popup with that kind
-of nuance? For me, basically never. They tend to be some polite
-variation of, "We use cookies. They help us help you help us. If you
-don't like it, you're free to leave." I'm no legal expert, but I feel
-like most popups don't fulfill the EU's legal requirements, and are just
-hasty attempts to mitigate the risk of getting slapped with a full-force
-fine.
+Now that's not the only law that's applicable here. There's also 2009's
+ePrivacy Directive, along with some most recent enhancements out of the
+UK's ICO (Information Commissioner's Office). The more you try to
+understand this stuff, the more confusing it gets.
+
+But as far as I can tell, folks running websites were slow to catch up
+with the new laws, and understandably so. The changes they demand are
+daunting. In order to fully comply, many websites would have to both
+hire programmers to make changes and also re-think their whole business
+model. So instead of real changes, the first thing we started seeing was
+pop-up messages along the lines of, "We use cookies. They help us help
+you help us. If you don't like it, you're free to leave." This only
+served to reiterate the way things already were. Except that everyone
+who didn't know what cookies were before (i.e. most people) now has the
+false impression that they are bad, abnormal, but also ubiquitous and
+unavoidable: somewhere between MSG and herpes.
+
+---
 
 ## OK, so most consent popups are garbage, but it's the fault of lazy webmasters and not EU lawmakers?
 
