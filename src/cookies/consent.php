@@ -8,8 +8,9 @@ T::article_head($title, ['/cookies/' => 'What are cookies?']);
 
 Historically, cookies were always a matter of consent. Even today, when
 you visit, say, some news outlet's website, your browser (a program
-running on your computer) has a conversation with a server (a program
-running on a remote computer). It goes something like this:
+running on your computer) has a brief conversation with the server (the
+program running on a remote computer that houses the website). It goes
+something like this:
 
 > **Browser:** Hi `action-news-world.com`, I guess my user is in the mood
 > for sadness, because they're requesting the international news page.
@@ -43,20 +44,26 @@ nothing the website could have done to force the issue. It can't block
 the browser for refusing the cookies, because the cookies are the only
 reliable way to recognize the same browser coming back!
 
-> Note: there are a couple of other ways for a website to store data on
-> your computer, but they all rely on the browser agreeing to do what the
-> website asks. Just read that in whenever I use the word "cookies."
-
 In fact, all browsers have a setting you can toggle to refuse cookies,
-but it defaults to "accept," because many websites just won't work
-properly without cookies. And for the most part, it's not possible for
-your browser to be selective, because there's no way for it to tell
-which cookies are in your interest and which are against. That depends
-how the website uses the data, and your browser is not a mind-reader.
+but it defaults to "accept," because these days, many websites just
+won't work properly without cookies. You can make exceptions for
+specific websites, but beyond that, you can't be selective. There's
+no way for your browser to tell which cookies are in your interest and
+which are against. That depends how the website uses the data, and your
+browser is not a mind-reader.
+
+> Note: there are a couple of other ways for a website to store data on
+> your computer, but they all rely on the browser agreeing to do what
+> the website asks. Please just read that in whenever I use the word
+> "cookies."
+
+## The existing cookie consent broke down
 
 So for any given website, we've been stuck with all-or-nothing consent
-for cookies, and since cookies are sometimes essential functionality,
-the only way not to consent is not to visit the site at all.
+for cookies. This was OK back in the day when cookies just provided
+bonus enhancement features. But now that they often provide essential
+functionality, the only way not to consent
+is not to visit the site at all.
 
 It seems like this is where the EU's new laws were supposed to come in.
 As [described here](https://gdpr.eu/cookies/), they contain two key
@@ -90,17 +97,17 @@ user's preferences, and then retrieve and follow those preferences in
 all parts of your application code that interact with cookie data.
 
 And that's assuming you even know how to do that. Many people running
-websites are not software developers, but are using a content management
-system like Wordpress or Drupal and rely on third-party plugins to
-provide such functionality. Indeed, I'd wager most cookie consent popups
-you see are provided by such plugins, and that's part of the reason they
-lack nuance to the point of meaninglessness. The code that runs them was
-written with no specific knowledge of the particular website on which it
-would be used, and the people running the website may not even
-understand what cookies are. It's like an English-speaking, Canadian
-doctor asking for your informed consent for an operation that will be
-performed by a Japanese robot without any English documentation. It's all
-or nothing, and good luck getting genuinely informed.
+websites are not software developers, but are using software like
+Wordpress or Drupal as a turn-key solution. They rely on third-party
+plugins to provide extra features. Indeed, I'd wager most cookie consent
+popups you see are provided by such plugins, and that's part of the
+reason they lack nuance to the point of meaninglessness. The code that
+runs them was written with no specific knowledge of the particular
+website on which it would be used, and the people running the website
+may not even understand what cookies are.
+
+It's like a Toronto restaurant that only offers dishes shipped in from Russia with no label. But you know, it's fine because they say, "All our
+It's all or nothing, and good luck getting genuinely informed.
 
 ## The "Do Not Track" experiment
 
@@ -145,7 +152,7 @@ reject cookies -- but now they can do so with more nuance. Non-technical
 folks running websites are no longer caught in the middle between
 systems that don't know how to talk to each other.
 
-## Sounds great. But does it solve the right problem?
+## Sounds good, but ... does it solve the right problem?
 
 
 
@@ -154,3 +161,17 @@ systems that don't know how to talk to each other.
 <?php
 T::article_foot(['/cookies/#sub-questions' => "Other sub-questions"]);
 T::foot();
+
+
+
+/*
+
+- when websites implement it, the only way to remember you want to opt out of certain cookies is to set another cookie
+- when websites implement it, they can design them in such a way as to go against the spirit of the legislation,
+making it more natural to just click OK. even very thorough consent interfaces are overwhelming and don't speak to the user
+about what they care about.
+- it's annoying for the user that even more of the web browsing
+  experience now consists of getting rid of interruptions. it would be much better to set your preferences once (in your browser settings), and be done with it. instead, we just treat consent popups the way internet users have treated all kinds of web popups since the beginning of time: get rid of them as quickly as possible. and that's great for companies that want to mine your data, because the quickest way to get rid of these popups always constitutes "consent."
+- it makes it seem like cookies are exceptional or pernicious
+
+*/

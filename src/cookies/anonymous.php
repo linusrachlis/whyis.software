@@ -32,3 +32,9 @@ you may remember from such shows as Mr. Robot.
 <?php
 T::article_foot(['/cookies/#sub-questions' => "Other sub-questions"]);
 T::foot();
+
+/*
+
+- VPN vs Tor vs HTTP proxies?
+
+*/
