@@ -128,12 +128,12 @@ aspect (1) is more true than ever (see aside).
     <h3>Web 2.0</h3>
     <ol>
         <li>
-            A website has a one-to-many relationship with visitors.
+            A website has a one-to-many relationship with visitors.<br>
             ✅ <em>Oh yeah, double down on this, the more visitors the better</em>
         </li>
         <li>
             <del>A website is a repository of documents. For the most part, any
-            visitor requesting the same document will be served in the same way.</del>
+            visitor requesting the same document will be served in the same way.</del><br>
             ❌❌❌ <em>Nope we are too hip for this now, documents are programs, rock on postmodernity</em> 🤘
         </li>
     </ol>
