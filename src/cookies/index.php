@@ -20,16 +20,17 @@ you've selected (e.g. Celsius vs. Fahrenheit), number of free articles
 you've viewed, etc.
 
 Websites have used cookies exuberantly since the 1990s, but in the new
-century, various European legislative bodies have been busy passing
-digital privacy laws that (among other things) affect the use of cookies
-and other ways of storing data on visitors' computers. Most websites are
-globally available, and therefore available to EU citizens, and
-therefore subject to these laws.
+millenium, the European parliament has been busy passing digital privacy
+laws that (among other things) affect the use of cookies and other ways
+of storing data on visitors' computers. Most websites are globally
+available, and therefore available to EU citizens, and therefore subject
+to these laws.
 
 The most noticeable result -- especially when browsing from the EU -- is
 yet another layer of pop-ups and legalese for website visitors to wade
-through. This approach does not genuinely empower users to control their
-data, especially since most websites have countervailing incentives.
+through. So far, this approach has not genuinely empowered users to
+control their data, especially since most websites have countervailing
+incentives.
 
 <?php T::markdown_end() ?>
 

@@ -20,6 +20,8 @@ that houses the website). It goes something like this:
 > Also, can you hold these for me?
 
 > <pre>
+> font size = 14
+> temp unit = C
 > visitor ID = ABC123
 > country code = CA
 > free articles viewed = 0
@@ -45,7 +47,8 @@ the browser for refusing the cookies, because the cookies are the only
 reliable way to recognize the same browser coming back!
 
 <aside>
-    Note: there are a couple of other ways for a website to store data on
+    <strong>Note:</strong>
+    there are a couple of other ways for a website to store data on
     your computer, but they all rely on the browser agreeing to do what
     the website asks. Please just read that in whenever I use the word
     "cookies."
@@ -65,24 +68,31 @@ So for any given website, we've been stuck with all-or-nothing consent
 for cookies. This was OK back in the day when cookies just provided
 bonus enhancement features. But now that they often provide essential
 functionality, the only way not to consent is not to visit the site at
-all. This was the situation at the turn of the millenium. Then EU
-legislative bodies got busy.
+all. This was the situation at the turn of the millenium. It so happened
+the European parliament was about to pass some sweeping digital privacy
+laws, which among other things, affect the use of cookies by anyone
+anywhere, so long as the cookie recipient is in the EU.
 
-I won't dwell on the legal specifics, because I'll just get them wrong
-anyway. But as far as I can tell, it began in 2009 with something called
-the ePrivacy Directive, which introduced a distinction between essential
-cookies (cookies that are technically necessary to provide the service a
-website visitor requests) and others (e.g. free article tracking, ad
-personalization). The ePrivacy Directive required some kind of consent
-for the use of non-essential cookies, but it sounds like the wording was
-weak enough that most folks making websites didn't take much notice.
+I won't dwell on the legal specifics, because I probably have them
+slightly wrong. But as far as I can tell, it began in 2009 with
+something called the ePrivacy Directive, which introduced a distinction
+between essential cookies (cookies that are technically necessary to
+provide the requested service) and others (e.g. free article tracking,
+ad personalization). The ePrivacy Directive required *some kind* of
+consent for the use of non-essential cookies, but the wording was weak
+enough that most folks making websites didn't take much notice.
 
 Then in 2018, another batch of digital privacy laws, the GDPR (General
 Data Protection Regulation) raised the standard of consent that applies
 to this requirement. This is when I remember cookie consent messages
 suddenly popping up on every major website like weeds. They tended to be
-some polite variation of, "We use cookies. They help us help you help
-us. If you don't like it, you're free to leave."
+some polite variation of,
+
+> We use cookies. They help us help you help us. If you don't like it,
+> you're free to leave.
+
+> <small>Also, by even looking at this message, you agree to anything we
+> want, NO TAKEBACKS</small>
 
 When you started seeing these messages, you probably had one of two
 reactions. If you already knew how cookies work, as described above, you
@@ -103,8 +113,8 @@ with [EU laws](https://gdpr.eu/cookies/), especially this part:
 > "Allow users to access your service even if they refuse to allow the
 > use of certain cookies."
 
-There's a pretty good reason it took folks running websites a while to
-get compliant with this. It so happens that it's a big ask on a
+However, there's a pretty good reason it took folks running websites a
+while to get compliant with this. It so happens that it's a big ask on a
 technical level. The computer code running a website that asks your
 browser to store some data was never written with the expectation that
 it may have to be selective. Now new code must be written not only to
@@ -126,25 +136,25 @@ tried to cover their butt.
 
 Eventually, most websites caught up to what they thought was required of
 them. Nowadays, if you browse the web from the EU (or use proxy software
-to make it look like you're in the EU), you will be constantly harassed
-by detailed information and questions you probably don't care about.
-Just about every major website will explain technical details in its own
-way (often trying to be cute and on-brand), and give you an overwhelming
-array of choices, the most natural reaction to which is to click the
-big, shiny "accept business as usual" button so you can just do what you
-came to do with the confidence that things will work correctly.
+to make it look like you're in the EU), you will be constantly
+interrupted by things you probably don't care about (so, the internet,
+but moreso). Just about every major website will explain technical
+details in its own way (often trying to be cute and on-brand), and give
+you an overwhelming array of choices, the most natural reaction to which
+is to click the big, shiny "accept business as usual" button so you can
+just do what you came to do with the confidence that things will work
+correctly.
 
 Meanwhile, those of us outside the EU still mostly get the old-style,
-"Cookies! Deal with it!" banners, even though I can't find any legal
-basis for these. They aren't remotely compliant with EU legislation, nor
-do they seem to be required by any other jurisdiction. But forget it,
-I'm not a lawyer.
+"Cookies! Deal with it!" banners, though I'm not sure why. They aren't
+remotely compliant with EU legislation, nor do they seem to be required
+by any other jurisdiction. But forget it, I'm not a lawyer.
 
-The point is, despite increasing compliance, the EU legislation relating
-to cookies has created a mountain of busywork for folks who make
-websites without much advancing the public interest. Billions of people
-learned that "cookies are small text files stored on your computer," and
-then learned that over and over until they were blue in the face.
+The point is, despite increasing compliance, the EU cookie laws have
+created a mountain of busywork for folks who make websites without much
+advancing the public interest. Billions of people learned that "cookies
+are small text files stored on your computer," and then learned that
+over and over until they were blue in the face.
 
 A smaller demographic (mostly in the EU) have gained some control over
 what cookies they accept. However, unless you have the extra time and
@@ -160,14 +170,13 @@ for many websites, their entire business model relies on serving
 personalized ads. They will therefore make it as hard as legally
 permissible to opt out of advertising-related cookies.
 
-## A real change
+## There goes the neighbourhood
 
-Now, even more recently, the UK's ICO (Information Commissioner's
-Office) has published new guidelines for GDPR compliance that raise the
-standard of consent even further. They have made it explicit that all
-non-essential cookies must be *opt-in,* and the user interface for
-opting in may not be emphasized compared to the user interface for
-staying out.
+Now, even more recently, the UK Information Commissioner's Office (ICO)
+published new guidelines for GDPR compliance that raise the standard of
+consent even further. They made it explicit that all non-essential
+cookies must be *opt-in,* and the button for opting in may not be
+emphasized over the button for staying out.
 
 Who do you know who would opt into ad personalization, or even
 anonymized analytics? The interruptive nature of consent pop-ups means
@@ -182,11 +191,11 @@ is limited.
 
 Well, this looks a lot more like consent. Now the question becomes ...
 is this a good thing? Sure, I resent ads following me between websites,
-but unfortunately, many, many websites currently have no other source of
-revenue. Sure, I don't like to think that, as a website visitor, my
-experience is being used as part of an experiment to see which type of
-manipulative behaviour can best increase conversion rates, but effective
-analytics tracking can also help useful websites become even more
+but unfortunately, many websites currently have no other source of
+revenue. Sure, I don't like that my web browsing experience is often
+used as part of an experiment to see which type of manipulative
+behaviour can best increase conversion rates. On the other hand,
+effective analytics tracking allows useful websites to become even more
 useful, and it now seems to be illegal in the UK.
 
 I'm not sure how the ICO's new guidelines will play out, but suffice to
@@ -196,9 +205,9 @@ Where did this all go wrong?
 
 ## The "Do Not Track" experiment
 
-The GDPR was introduced just as another e-privacy experiment failed.
-Between 2009 and 2018, the internet standards community tried to
-introduce a new, standard way for website visitors to opt out of being
+The GDPR was introduced just as another digital privacy experiment
+failed. Between 2009 and 2018, the internet standards community tried to
+create a new, standard way for website visitors to opt out of being
 tracked between websites for advertising or other non-essential
 purposes. (It's this kind of tracking that results in your being
 followed around the web by ads for whatever you've been searching for
@@ -218,30 +227,60 @@ standardization. Both missed their mark somehow. Hmm.
 ## A holistic solution
 
 If we really want to give people control over what data websites can
-store on their computers, we need international legislation with an
-integrated technical standard.
+store on their computers, we need international legislation working
+together with a new technical standard.
 
-Easy, right? But imagine if you could adjust your browser setting thus:
-"I'm OK with strictly necessary cookies, preference cookies, and
-statistics cookies, but not with marketing cookies. Oh, except for
-CBC.ca, their marketing cookies are OK. 🇨🇦😁"
+Easy, right?
 
-First of all, you need a technical standard so that, when websites ask
-to store data on your computer, they must specify the purpose at the
-code level, in terms of some set of categories. Then you need
-legislation to provide enough incentive to do this truthfully. Then your
-browser can accept or reject cookies on your behalf with confidence.
+But imagine if you could adjust your browser setting thus: "I'm OK with
+essential cookies, preference cookies, and analytics cookies, but not
+with advertising cookies. Oh, except for CBC.ca, their advertising
+cookies are OK. 🇨🇦😁"
 
-The key here is that it's up to software developers to adhere to the new
-technical standard, but they don't have to do a lot of busywork to
-develop new user interfaces for preferences that should just be part of
-the browser itself. (and they don't control the manner of asking consent)
+* No more getting interrupted for each new website you visit: set up
+  your browser however you want and then forget about it.
+* No more figuring out a new interface for each new site, no more
+  fighting that interface because it's not designed in your
+  interest: use your browser's interface, which is designed to be easy
+  to use and take your side.
+* No more duplicated busywork for programmers to make websites ask for
+  consent, store the response, and check the response in every code
+  path. Cookies were always a matter of consent: just ask the browser to
+  store some data, and it will either accept or refuse, according to the
+  user's wishes.
 
+To enable the browser to make that choice, one key thing needs to
+change. Let's go back to that conversation above, between the browser
+and `action-news-world.com`. The server says,
 
-And as always, it's up to browsers to accept or
-reject cookies -- but now they can do so with more nuance. Non-technical
-folks running websites are no longer caught in the middle between
-systems that don't know how to talk to each other.
+> **Server:** ... OK, got that page for you. Also, can you hold these for me?
+
+Now spot the difference:
+
+> <pre>
+> font size = 14           (preferences)
+> temp unit = C            (preferences)
+> visitor ID = ABC123      (advertising)
+> country code = CA        (analytics)
+> free articles viewed = 0 (paywall)
+> </pre>
+
+And now the browser can say,
+
+> **Browser:** OK, my user is willing to accept preference and analytics
+> cookies, but not advertising or paywall cookies. I won't bother
+> storing those `visitor ID` and `free articles viewed` things.
+
+> **Server:** Well, gee shucks.
+
+In addition to simply asking to store bits of data, the server has
+described the purpose of each datum in terms of a set of categories that
+the browser can match up with its user preferences.
+
+For that matching to happen, we need a technical standard. To
+incentivize the people who program the server to use those categories
+truthfully, we need a law. Problem solved (you know, other than the 999
+details that would need to be worked out).
 
 ## Sounds good, but ... does it solve the right problem?
 

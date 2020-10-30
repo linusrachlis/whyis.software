@@ -154,7 +154,7 @@ Websites with such ambitions will set a cookie that just holds a large
 random number:
 
 <pre style="clear: right;">
-ID = b94d27b9934d3e08...
+visitor ID = b94d27b9934d3e08...
 </pre>
 
 Your computer presents this unique random number again on every visit,
@@ -168,7 +168,7 @@ barcode to pull up your profile, which could now be extensive because it
 doesn't have to fit on a little card; all that needs to fit is the
 barcode (representing a unique number).
 
-Of course, another strategy would be to simply hire as many staff as
+Of course, another strategy would be simply to hire as many staff as
 attendees, so that each staff member only has to remember one person's
 preferences, but this would be overly costly. It's the same with a
 website serving visitors. Each time you visit a page, the computer
