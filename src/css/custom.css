@@ -1,16 +1,16 @@
 body {
     font: 12pt/1.4 'Fira Sans', sans-serif;
     margin: 1rem;
-    background-color: seashell;
-    color: #444;
+    background-color: #312c26;
+    color: #e6ded3;
 }
 
 a {
-    color: black;
+    color: lime;
     text-decoration: underline;
 }
 a:visited {
-    color: slategray;
+    color: #80d580;
 }
 a:active, a:hover {
     background: black;
@@ -40,8 +40,8 @@ footer a:hover
 header h1, section h1, article .header {
     color: lime;
     text-shadow: rgba(0,255,0,.66) 0 0 .5em;
-    background: black;
-    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
+    background: #312c26;
+    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, #312c26 100%);
     font-family: 'VT323', monospace;
     font-weight: normal;
     line-height: 1;
@@ -101,6 +101,7 @@ article aside {
     border-bottom: 2px dashed #888;
     padding: 1em;
     margin: 1em 0;
+    background-color: #0c1c0a;
 }
 article aside h3 {
     font-family: 'Fira Sans Condensed', sans-serif;
