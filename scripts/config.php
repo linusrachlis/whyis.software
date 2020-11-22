@@ -11,6 +11,8 @@ $pages = [
 $css_files = [
     'normalize',
     'main',
+];
+$scss_files = [
     'custom',
 ];
 

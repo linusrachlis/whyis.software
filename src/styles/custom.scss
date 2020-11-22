@@ -1,22 +1,16 @@
 body {
     font: 12pt/1.4 'Fira Sans', sans-serif;
     margin: 1rem;
-    background-color: #312c26;
-    color: #e6ded3;
+    background-color: #aaa;
+    color: #111;
 }
 
 a {
-    color: lime;
+    color: black;
     text-decoration: underline;
 }
-a:visited {
-    color: #80d580;
-}
 a:active, a:hover {
-    background: black;
-    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
-    color: lime;
-    text-decoration: none;
+    color: #333;
 }
 
 header h1 a,
@@ -35,13 +29,15 @@ footer a:hover
     color: lime;
     background: transparent;
     text-decoration: underline;
+    border: .2em inset #888;
 }
 
 header h1, section h1, article .header {
+    border: .2em inset #888;
     color: lime;
     text-shadow: rgba(0,255,0,.66) 0 0 .5em;
-    background: #312c26;
-    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, #312c26 100%);
+    background: black;
+    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
     font-family: 'VT323', monospace;
     font-weight: normal;
     line-height: 1;
@@ -72,11 +68,12 @@ header .tagline {
 }
 
 article h2 {
+    border: .2em inset #888;
     margin: 1rem -1rem;
     color: lime;
     text-shadow: rgba(0,255,0,.66) 0 0 .5em;
     background: black;
-    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
+    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
     font: 1.5em 'VT323', monospace;
     padding: .5em;
 }
@@ -87,12 +84,12 @@ article code {
     font-family: 'Fira Code', monospace;
 }
 article pre {
+    border: .2em inset #444;
     font-size: 90%;
     font-family: 'Fira Code', monospace;
     color: white;
     text-shadow: rgba(255,255,255,.5) 0 0 .33em;
-    background: black;
-    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
+    background: #444;
     padding: 1em;
     white-space: pre-wrap;
 }
@@ -121,10 +118,11 @@ article aside :last-child {
 }
 
 footer {
+    border: .2em inset #888;
     color: lime;
     text-shadow: rgba(0,255,0,.66) 0 0 .5em;
     background: black;
-    background: linear-gradient(0deg, rgba(3,73,0,1) 0%, black 100%);
+    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
     font: 1.5em 'VT323', monospace;
     padding: .5rem 1rem;
     margin: 1rem -1rem -1rem;
