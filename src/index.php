@@ -46,9 +46,8 @@ explanation. For each question, I give a high-level answer followed by
 sub-questions you can visit, depending where you're interested in
 diving deeper.
 
-I'm a software developer in Toronto, ON, Canada. You can also find me at
-my [strange personal website](https://linus.rachlis.net),
-[Twitter](https://twitter.com/winnythefoo), or
+I'm a software developer in Toronto, ON, Canada. I also write on other topics
+on my [personal website](https://linus.rachlis.net) and share some on
 [Github](https://github.com/linusrachlis).
 
         <?php T::markdown_end() ?>
