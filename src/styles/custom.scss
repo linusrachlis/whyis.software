@@ -1,8 +1,18 @@
+$main-background-color: #aaa;
+$main-text-color: #111;
+$header-border: .15em inset #888;
+$header-color: lime;
+
+@mixin header-background {
+    background: black;
+    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
+}
+
 body {
     font: 12pt/1.4 'Fira Sans', sans-serif;
     margin: 1rem;
-    background-color: #aaa;
-    color: #111;
+    background-color: $main-background-color;
+    color: $main-text-color;
 }
 
 a {
@@ -26,18 +36,16 @@ footer a:visited,
 footer a:active,
 footer a:hover
 {
-    color: lime;
+    color: $header-color;
     background: transparent;
     text-decoration: underline;
-    border: .2em inset #888;
 }
 
 header h1, section h1, article .header {
-    border: .2em inset #888;
-    color: lime;
+    border: $header-border;
+    color: $header-color;
     text-shadow: rgba(0,255,0,.66) 0 0 .5em;
-    background: black;
-    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
+    @include header-background;
     font-family: 'VT323', monospace;
     font-weight: normal;
     line-height: 1;
@@ -68,12 +76,11 @@ header .tagline {
 }
 
 article h2 {
-    border: .2em inset #888;
+    border: $header-border;
     margin: 1rem -1rem;
-    color: lime;
+    color: $header-color;
     text-shadow: rgba(0,255,0,.66) 0 0 .5em;
-    background: black;
-    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
+    @include header-background;
     font: 1.5em 'VT323', monospace;
     padding: .5em;
 }
@@ -93,12 +100,14 @@ article pre {
     padding: 1em;
     white-space: pre-wrap;
 }
+$aside-border: 2px dashed scale-color($color: $main-background-color, $lightness: -50%);
 article aside {
-    border-top: 2px dashed #888;
-    border-bottom: 2px dashed #888;
+    border-top: $aside-border;
+    border-bottom: $aside-border;
     padding: 1em;
     margin: 1em 0;
-    background-color: #0c1c0a;
+    background-color: scale-color($color: $main-background-color, $lightness: -10%);
+    color: black;
 }
 article aside h3 {
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -119,7 +128,7 @@ article aside :last-child {
 
 footer {
     border: .2em inset #888;
-    color: lime;
+    color: $header-color;
     text-shadow: rgba(0,255,0,.66) 0 0 .5em;
     background: black;
     background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
@@ -145,7 +154,7 @@ footer p {
         padding: 1rem 2rem;
     }
     article aside {
-        border-left: 2px dashed #888;
+        border-left: $aside-border;
         border-radius: 1em;
         float: right;
         width: 40%;
