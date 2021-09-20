@@ -9,7 +9,7 @@
     </header>
 
     <section>
-        <h1>Articles</h1>
+        <h2>Articles</h2>
 
         <ul class=articles>
             <li><a href="/cookies/">What are cookies, and why does every website make me agree to them?</a></li>
@@ -23,7 +23,7 @@
     </section>
 
     <section>
-        <h1>Why is this website?</h1>
+        <h2>Why is this website?</h2>
         <?php T::markdown_begin() ?>
 
 When I first used a computer, I felt uncertainty and awe. This was an

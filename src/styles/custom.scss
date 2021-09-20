@@ -1,11 +1,11 @@
-$main-background-color: #aaa;
-$main-text-color: #111;
-$header-border: .15em inset #888;
-$header-color: lime;
+$main-background-color: #d7bdb3;
+$main-text-color: #443a36;
+$header-border: 4px inset darken($main-background-color, 10%);
+$header-1-color: lime;
+$header-1-background-start: #16460c;
+$header-2-color: #ff8f00;
 
 @mixin header-background {
-    background: black;
-    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
 }
 
 html {
@@ -39,16 +39,17 @@ footer a:visited,
 footer a:active,
 footer a:hover
 {
-    color: $header-color;
+    color: $header-1-color;
     background: transparent;
     text-decoration: underline;
 }
 
-header h1, section h1, article .header {
+header h1, article .header {
     border: $header-border;
-    color: $header-color;
-    text-shadow: rgba(0,255,0,.66) 0 0 .5em;
-    @include header-background;
+    color: $header-1-color;
+    text-shadow: $header-1-color 0 0 .5em;
+    background: black;
+    background: linear-gradient(0deg, $header-1-background-start 0%, black 100%);
     font-family: 'VT323', monospace;
     font-weight: normal;
     line-height: 1;
@@ -57,10 +58,6 @@ header h1, section h1, article .header {
 header h1 {
     margin: -1rem -1rem 0;
     font-size: 2.5em;
-}
-section h1 {
-    margin: 1rem -1rem;
-    font-size: 1.5em;
 }
 article .header {
     margin: -1rem -1rem 0;
@@ -78,12 +75,13 @@ header .tagline {
     font: 1.3em 'Fira Code', sans-serif;
 }
 
-article h2 {
+section h2, article h2 {
     border: $header-border;
     margin: 1rem -1rem;
-    color: $header-color;
-    text-shadow: rgba(0,255,0,.66) 0 0 .5em;
-    @include header-background;
+    color: $header-2-color;
+    text-shadow: $header-2-color 0 0 .5em;
+    background: black;
+    background: linear-gradient(0deg, #663900 0%, black 100%);
     font: 1.5em 'VT323', monospace;
     padding: .5em;
 }
@@ -131,11 +129,11 @@ article aside :last-child {
 }
 
 footer {
-    border: .2em inset #888;
-    color: $header-color;
-    text-shadow: rgba(0,255,0,.66) 0 0 .5em;
+    border: $header-border;
+    color: $header-1-color;
+    text-shadow: $header-1-color 0 0 .5em;
     background: black;
-    background: linear-gradient(0deg, black 0%, rgba(3,73,0,1) 100%);
+    background: linear-gradient(0deg, black 0%, $header-1-background-start 100%);
     font: 1.5em 'VT323', monospace;
     padding: .5rem 1rem;
     margin: 1rem -1rem -1rem;
