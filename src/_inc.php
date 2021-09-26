@@ -38,7 +38,26 @@ class T {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css" class="site-styles">
+<? if (DEV_MODE) { ?>
+    <script>
+        window.addEventListener('load', () => {
+            const links = document.getElementsByClassName('site-styles');
+            const reloadSiteStyles = () => {
+                const queryString = '?' + (new Date()).getTime();
+                const link = links[0];
+                const parentElement = link.parentElement;
+                const newLink = link.cloneNode();
+                newLink.href = link.href.replace(/\?.*|$/, queryString);
+                newLink.addEventListener('load', () => {
+                    link.remove();
+                });
+                parentElement.insertBefore(newLink, link);
+            };
+            setInterval(reloadSiteStyles, 1000);
+        })
+    </script>
+<? } ?>
 </head>
 
 <body>

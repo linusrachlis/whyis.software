@@ -5,6 +5,8 @@ require __DIR__ . '/config.php';
 
 use ScssPhp\ScssPhp\Compiler;
 
+define('DEV_MODE', true);
+
 $request_uri = $_SERVER['REQUEST_URI'];
 
 if (substr($_SERVER['REQUEST_URI'], -1) == '/') {
@@ -19,7 +21,7 @@ foreach ($pages as $page) {
     }
 }
 
-if ($request_uri == '/style.css') {
+if (preg_match('/\/style\.css(\?.*)?$/', $request_uri)) {
     header('Content-type: text/css');
     foreach ($css_files as $css_file) {
         readfile("$src_dir/styles/$css_file.css");

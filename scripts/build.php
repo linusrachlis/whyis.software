@@ -5,6 +5,8 @@ require __DIR__ . '/config.php';
 
 use ScssPhp\ScssPhp\Compiler;
 
+define('DEV_MODE', false);
+
 $dist_dir = __DIR__ . '/../dist';
 
 if (!is_dir($dist_dir)) {
