@@ -1,12 +1,9 @@
-$main-background-color: #d7bdb3;
+$main-background-color: #ddc4ba;
 $main-text-color: #443a36;
 $header-border: 4px inset darken($main-background-color, 10%);
 $header-1-color: lime;
 $header-1-background-start: #16460c;
 $header-2-color: #ff8f00;
-
-@mixin header-background {
-}
 
 html {
     font: 12pt/1.4 'Fira Sans', sans-serif;
@@ -44,7 +41,7 @@ footer a:hover
     text-decoration: underline;
 }
 
-header h1, article .header {
+header h1, article .header .breadcrumbs {
     border: $header-border;
     color: $header-1-color;
     text-shadow: $header-1-color 0 0 .5em;
@@ -59,20 +56,23 @@ header h1 {
     margin: -1rem -1rem 0;
     font-size: 2.5em;
 }
-article .header {
-    margin: -1rem -1rem 0;
-}
 article .header .breadcrumbs {
+    margin: -1rem -1rem 0;
     font-size: 1.25em;
 }
-article .header h1 {
-    font-weight: normal;
-    margin: 1rem 0;
-    font-size: 2em;
-}
-
 header .tagline {
+    letter-spacing: -0.025em;
     font: 1.3em 'Fira Code', sans-serif;
+}
+article .header h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    letter-spacing: -0.025em;
+    font: 1.3em 'Fira Code', sans-serif;
+    border: 4px outset darken($main-background-color, 6%);
+    background-color: lighten($main-background-color, 3%);
+    padding: 1rem;
 }
 
 section h2, article h2 {
@@ -82,7 +82,8 @@ section h2, article h2 {
     text-shadow: $header-2-color 0 0 .5em;
     background: black;
     background: linear-gradient(0deg, #663900 0%, black 100%);
-    font: 1.5em 'VT323', monospace;
+    letter-spacing: -0.025em;
+    font: 1.1em 'Fira Code', monospace;
     padding: .5em;
 }
 article blockquote {
@@ -147,7 +148,7 @@ footer p {
         margin: 2rem;
         font-size: 14pt;
     }
-    header h1, article .header {
+    header h1, article .header .breadcrumbs {
         margin: -2rem -2rem 0;
         padding: 1rem 2rem;
     }
@@ -172,12 +173,12 @@ footer p {
     body {
         font-size: 16pt;
     }
-    section, article .content {
+    section, article .content, article .header h1 {
         width: calc(1024px - 4rem);
         margin-left: auto;
         margin-right: auto;
     }
-    header, article .header {
+    header, article .header .breadcrumbs {
         text-align: center;
     }
     footer {
