@@ -1,6 +1,5 @@
 $main-background-color: #ddc4ba;
 $main-text-color: #443a36;
-$header-border: 4px inset darken($main-background-color, 10%);
 $header-1-color: lime;
 $header-1-background-start: #16460c;
 $header-2-color: #ff8f00;
@@ -42,7 +41,6 @@ footer a:hover
 }
 
 header h1, article .header .breadcrumbs {
-    border: $header-border;
     color: $header-1-color;
     text-shadow: $header-1-color 0 0 .5em;
     background: black;
@@ -70,13 +68,12 @@ article .header h1 {
     box-sizing: border-box;
     letter-spacing: -0.025em;
     font: 1.3em 'Fira Code', sans-serif;
-    border: 4px outset darken($main-background-color, 6%);
+    border: 4px inset darken($main-background-color, 6%);
     background-color: lighten($main-background-color, 3%);
     padding: 1rem;
 }
 
 section h2, article h2 {
-    border: $header-border;
     margin: 1rem -1rem;
     color: $header-2-color;
     text-shadow: $header-2-color 0 0 .5em;
@@ -130,7 +127,6 @@ article aside :last-child {
 }
 
 footer {
-    border: $header-border;
     color: $header-1-color;
     text-shadow: $header-1-color 0 0 .5em;
     background: black;
