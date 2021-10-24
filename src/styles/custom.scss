@@ -1,190 +1,79 @@
-$main-background-color: #ddc4ba;
-$main-text-color: #443a36;
-$header-1-color: lime;
-$header-1-background-start: #16460c;
-$header-2-color: #ff8f00;
-
-html {
-    font: 12pt/1.4 'Fira Sans', sans-serif;
-}
+$body-bgcolor: white;
+$body-text-color: black;
+$body-link-color: #246;
+$body-link-color-active: #646;
+$body-link-bgcolor: #def;
+$body-link-bgcolor-active: #fef;
 
 body {
-    margin: 1rem;
-    background-color: $main-background-color;
-    color: $main-text-color;
+    font: 20px/1.4 'Roboto', sans-serif;
+    margin: 2em;
+    background-color: $body-bgcolor;
+    color: $body-text-color;
 }
 
-a {
-    color: black;
-    text-decoration: underline;
-}
-a:active, a:hover {
-    color: #333;
+.body-text a {
+    color: $body-link-color;
+    background-color: $body-link-bgcolor;
+    padding: .2em;
+    border-radius: .2em;
+
+    &:link, &:active {
+        color: $body-link-color;
+        background-color: $body-link-bgcolor;
+    }
+
+    &:active, &:hover {
+        color: $body-link-color-active;
+        background: linear-gradient($body-link-bgcolor, $body-link-bgcolor-active);
+    }
 }
 
-header h1 a,
-header h1 a:visited,
-header h1 a:active,
-header h1 a:hover,
-.header a,
-.header a:visited,
-.header a:active,
-.header a:hover,
-footer a,
-footer a:visited,
-footer a:active,
-footer a:hover
-{
-    color: $header-1-color;
-    background: transparent;
-    text-decoration: underline;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
 }
 
-header h1, article .header .breadcrumbs {
-    color: $header-1-color;
-    text-shadow: $header-1-color 0 0 .5em;
-    background: black;
-    background: linear-gradient(0deg, $header-1-background-start 0%, black 100%);
-    font-family: 'VT323', monospace;
-    font-weight: normal;
-    line-height: 1;
-    padding: 1rem;
-}
-header h1 {
-    margin: -1rem -1rem 0;
-    font-size: 2.5em;
-}
-article .header .breadcrumbs {
-    margin: -1rem -1rem 0;
-    font-size: 1.25em;
-}
-header .tagline {
-    letter-spacing: -0.025em;
-    font: 1.3em 'Fira Code', sans-serif;
-}
-article .header h1 {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    box-sizing: border-box;
-    letter-spacing: -0.025em;
-    font: 1.3em 'Fira Code', sans-serif;
-    border: 4px inset darken($main-background-color, 6%);
-    background-color: lighten($main-background-color, 3%);
-    padding: 1rem;
-}
-
-section h2, article h2 {
-    margin: 1rem -1rem;
-    color: $header-2-color;
-    text-shadow: $header-2-color 0 0 .5em;
-    background: black;
-    background: linear-gradient(0deg, #663900 0%, black 100%);
-    letter-spacing: -0.025em;
-    font: 1.1em 'Fira Code', monospace;
+h1 {
+    background-color: $body-link-bgcolor;
     padding: .5em;
-}
-article blockquote {
-    font-size: 90%;
-}
-article code {
-    font-family: 'Fira Code', monospace;
-}
-article pre {
-    border: .2em inset #444;
-    font-size: 90%;
-    font-family: 'Fira Code', monospace;
-    color: white;
-    text-shadow: rgba(255,255,255,.5) 0 0 .33em;
-    background: #444;
-    padding: 1em;
-    white-space: pre-wrap;
-}
-$aside-border: 2px dashed scale-color($color: $main-background-color, $lightness: -50%);
-article aside {
-    border-top: $aside-border;
-    border-bottom: $aside-border;
-    padding: 1em;
-    margin: 1em 0;
-    background-color: scale-color($color: $main-background-color, $lightness: -10%);
-    color: black;
-    font-size: 90%;
-}
-article aside h3 {
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-weight: bold;
-    font-size: 1.25em;
-    margin: .5em 0;
-}
-article aside ol {
-    margin: .5em 0;
-    padding: 0 0 0 1.5em;
-}
-article aside :first-child {
-    margin-top: 0;
-}
-article aside :last-child {
-    margin-bottom: 0;
+    margin-left: -.5em;
+    margin-right: -.5em;
 }
 
-footer {
-    color: $header-1-color;
-    text-shadow: $header-1-color 0 0 .5em;
-    background: black;
-    background: linear-gradient(0deg, black 0%, $header-1-background-start 100%);
-    font: 1.5em 'VT323', monospace;
-    padding: .5rem 1rem;
-    margin: 1rem -1rem -1rem;
-}
-footer p {
-    margin: 1rem;
+.tagline {
+    font-family: 'JetBrains Mono', monospace;
 }
 
-@media only screen and (min-width: 768px) {
-    body {
-        margin: 2rem;
-        font-size: 14pt;
-    }
-    header h1, article .header .breadcrumbs {
-        margin: -2rem -2rem 0;
-        padding: 1rem 2rem;
-    }
-    section h1, article h2 {
-        margin: 2rem -2rem;
-        padding: 1rem 2rem;
-    }
-    article aside {
-        border-left: $aside-border;
-        border-radius: 1em;
-        float: right;
-        width: 40%;
-        margin-left: 2em;
-    }
-    footer {
-        margin: 2rem -2rem -2em;
-        padding: 1rem 2rem;
-    }
+h2, h3, h4, h5, h6 {
+    background: linear-gradient($body-bgcolor, $body-link-bgcolor);
+    padding: .5em;
+    margin-left: -.5em;
+    margin-right: -.5em;
 }
 
-@media only screen and (min-width: 1024px) {
-    body {
-        font-size: 16pt;
-    }
-    section, article .content, article .header h1 {
-        width: calc(1024px - 4rem);
-        margin-left: auto;
-        margin-right: auto;
-    }
-    header, article .header .breadcrumbs {
-        text-align: center;
-    }
-    footer {
-        text-align: center;
-    }
-}
+.article-previews {
+    a {
+        display: block;
+        background: $body-link-bgcolor-active;
+        border-radius: 0 1em 1em 1em;
+        padding: 1em;
+        color: $body-link-color;
+        margin: 1em 1em 1em 0;
 
-ul.articles li {
-    margin: .5em 0;
-}
-ul.articles li a {
-    font-weight: bold;
+        &:nth-child(even) {
+            border-radius: 1em 0 1em 1em;
+            text-align: right;
+            margin: 1em 0 1em 1em;
+        }
+
+        &:link, &:active {
+            color: $body-link-color;
+            background: $body-link-bgcolor-active;
+        }
+
+        &:active, &:hover {
+            color: $body-link-color-active;
+            background: linear-gradient($body-link-bgcolor, $body-link-bgcolor-active);
+        }
+    }
 }
