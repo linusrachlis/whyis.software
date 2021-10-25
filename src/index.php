@@ -1,6 +1,6 @@
 <?php T::head() ?>
 
-    <header>
+    <header class=masthead>
         <h1>Why is software?</h1>
         <p class=tagline>
             <script>
@@ -18,11 +18,11 @@
 
     <section class=article-previews>
         <a href="/facebook-and-the-internet/">
-            The 2021 Facebook outage: what happened, and what is the Internet
+            Facebook's outage: what happened, and what is the Internet
             anyway?
         </a>
-        <a href="/foo-bar-zam/">
-            Foo bar, and also zam
+        <a href="mailto:ask@whyis.software">
+            Email me more questions
         </a>
     </section>
 

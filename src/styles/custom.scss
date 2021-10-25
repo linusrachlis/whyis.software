@@ -5,50 +5,74 @@ $body-link-color-active: #646;
 $body-link-bgcolor: #def;
 $body-link-bgcolor-active: #fef;
 
+html {
+    font: 18px/1.5 'Roboto', sans-serif;
+}
+
 body {
-    font: 20px/1.4 'Roboto', sans-serif;
-    margin: 2em;
+    margin: 1rem;
     background-color: $body-bgcolor;
     color: $body-text-color;
 }
 
-.body-text a {
+a {
     color: $body-link-color;
-    background-color: $body-link-bgcolor;
-    padding: .2em;
-    border-radius: .2em;
 
     &:link, &:active {
         color: $body-link-color;
-        background-color: $body-link-bgcolor;
     }
 
     &:active, &:hover {
         color: $body-link-color-active;
+    }
+}
+
+.body-text a {
+    background-color: $body-link-bgcolor;
+    padding: .1em .2em;
+    border-radius: .2em;
+
+    &:link, &:active {
+        background-color: $body-link-bgcolor;
+    }
+
+    &:active, &:hover {
         background: linear-gradient($body-link-bgcolor, $body-link-bgcolor-active);
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'JetBrains Mono', monospace;
+    line-height: 1.2;
+}
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1rem; }
+h4 { font-size: .8rem; }
+
+header.masthead {
+    h1 {
+        background-color: $body-link-bgcolor;
+        padding: .5em;
+    }
+
+    .tagline {
+        font-family: 'JetBrains Mono', monospace;
+    }
 }
 
-h1 {
-    background-color: $body-link-bgcolor;
-    padding: .5em;
-    margin-left: -.5em;
-    margin-right: -.5em;
-}
-
-.tagline {
-    font-family: 'JetBrains Mono', monospace;
+header.article {
+    h1 {
+        font-size: 1rem;
+        background-color: $body-link-bgcolor;
+        padding: .5em;
+        margin: -1rem -1rem 0 -1rem;
+    }
 }
 
 h2, h3, h4, h5, h6 {
     background: linear-gradient($body-bgcolor, $body-link-bgcolor);
     padding: .5em;
-    margin-left: -.5em;
-    margin-right: -.5em;
 }
 
 .article-previews {

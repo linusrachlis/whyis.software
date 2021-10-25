@@ -2,10 +2,7 @@
 
 $pages = [
     'index',
-    'cookies/index',
-    'cookies/websites-and-memory',
-    'cookies/anonymous',
-    'cookies/consent',
+    'facebook-and-the-internet/index',
 ];
 
 $css_files = [
