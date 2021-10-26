@@ -3,7 +3,7 @@
     <header class=masthead>
         <h1>
             <div class=main>Why is software</div>
-            <div class=completion>
+            <div class=completion aria-hidden=true>
                 <span class=tty></span><span class=cursor>_</span>
             </div>
         </h1>
