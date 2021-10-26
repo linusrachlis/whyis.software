@@ -3,7 +3,9 @@
     <header class=masthead>
         <h1>
             <div class=main>Why is software</div>
-            <div class=completion></div>
+            <div class=completion>
+                <span class=tty></span><span class=cursor>_</span>
+            </div>
         </h1>
         <p class=tagline>
             <script>
@@ -66,14 +68,41 @@ on my [personal website](https://linus.rachlis.net) and share some code on
             "so hard to use",
             "soft"
         ];
-        var container = document.querySelector('.masthead h1 .completion');
+        var container = document.querySelector('.masthead h1 .tty');
         var index = Math.round(Math.random() * (completions.length - 1));
-        var swap = function () {
-            container.innerText = completions[index] + "?";
+        var targetText, currentText;
+
+        function startNewCompletion () {
+            currentText = "";
+            targetText = completions[index] + "?";
+            typeText();
+        }
+
+        function typeText() {
+            currentText += targetText[currentText.length];
+            container.innerText = currentText;
+            if (currentText.length == targetText.length) {
+                setTimeout(eraseText, 2000);
+            } else {
+                setTimeout(typeText, 100);
+            }
+        }
+
+        function eraseText() {
+            currentText = currentText.substring(0, currentText.length - 1);
+            container.innerText = currentText;
+            var nextFunction = (currentText.length == 0)
+                ? finishCompletion
+                : eraseText;
+            setTimeout(nextFunction, 25);
+        }
+
+        function finishCompletion() {
             index = (index + 1) % completions.length;
-        };
-        swap();
-        setInterval(swap, 5000);
+            setTimeout(startNewCompletion, 1000);
+        }
+
+        startNewCompletion();
     });
     </script>
 <?php

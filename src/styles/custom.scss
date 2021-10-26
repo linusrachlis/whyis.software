@@ -60,10 +60,23 @@ h2 { font-size: 1.4rem; }
 h3 { font-size: 1rem; }
 h4 { font-size: .8rem; }
 
+@keyframes blink {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
 header.masthead {
     h1 {
         background-color: $body-link-bgcolor;
         padding: .5em;
+
+        .cursor {
+            animation: blink 0.25s ease-in-out 0s alternate infinite;
+        }
     }
 
     .tagline {
