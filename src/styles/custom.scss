@@ -1,3 +1,4 @@
+$body-font-size: 17px;
 $body-bgcolor: white;
 $body-text-color: black;
 $body-link-color: #246;
@@ -6,13 +7,22 @@ $body-link-bgcolor: #def;
 $body-link-bgcolor-active: #fef;
 
 html {
-    font: 18px/1.5 'Roboto', sans-serif;
+    font: $body-font-size/1.5 'Roboto', sans-serif;
+
+    @media (min-width: ($body-font-size * 39)) {
+        font-size: 20px;
+    }
 }
 
 body {
-    margin: 1rem;
+    margin: $body-font-size;
     background-color: $body-bgcolor;
     color: $body-text-color;
+    max-width: ($body-font-size * 39);
+
+    @media (min-width: ($body-font-size * 42)) {
+        margin: $body-font-size auto;
+    }
 }
 
 a {
@@ -66,7 +76,7 @@ header.article {
         font-size: 1rem;
         background-color: $body-link-bgcolor;
         padding: .5em;
-        margin: -1rem -1rem 0 -1rem;
+        margin: ($body-font-size * -1) ($body-font-size * -1) 0 ($body-font-size * -1);
     }
 }
 
