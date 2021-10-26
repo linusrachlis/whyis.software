@@ -1,7 +1,10 @@
 <?php T::head() ?>
 
     <header class=masthead>
-        <h1>Why is software?</h1>
+        <h1>
+            <div class=main>Why is software ...</div>
+            <div class=completion></div>
+        </h1>
         <p class=tagline>
             <script>
             (function() {
@@ -51,5 +54,27 @@ on my [personal website](https://linus.rachlis.net) and share some code on
         <?php T::markdown_end() ?>
 
     </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var completions = [
+            "so slow",
+            "so fast",
+            "so hard to use",
+            "in everything",
+            "so bad",
+            "in my fridge",
+            "soft"
+        ];
+        var container = document.querySelector('.masthead h1 .completion');
+        var index = 0;
+        var swap = function () {
+            container.innerText = completions[index] + "?";
+            index = (index + 1) % completions.length;
+        };
+        swap();
+        setInterval(swap, 5000);
+    });
+    </script>
 <?php
 T::foot(false);
