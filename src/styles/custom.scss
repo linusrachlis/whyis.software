@@ -67,6 +67,9 @@ header.masthead {
     }
 
     .tagline {
+        max-width: 17em;
+        margin: 1em auto;
+        text-align: center;
         font-family: 'JetBrains Mono', monospace;
     }
 }

@@ -2,7 +2,7 @@
 
     <header class=masthead>
         <h1>
-            <div class=main>Why is software ...</div>
+            <div class=main>Why is software</div>
             <div class=completion></div>
         </h1>
         <p class=tagline>
@@ -33,8 +33,8 @@
         <h2>Why is this website?</h2>
         <?php T::markdown_begin() ?>
 
-When I first used a computer, I felt uncertainty and awe. This was an
-information powertool, and I had better know what I was doing. Since then, a
+Circa 1992, when I first used a computer, I felt uncertainty and awe. This was
+an information powertool, and I had better know what I was doing. Since then, a
 few companies have grown massive by redefining personal computing as a sleek
 and magical experience. Users are no longer supposed to understand how software
 works.
@@ -58,16 +58,16 @@ on my [personal website](https://linus.rachlis.net) and share some code on
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         var completions = [
+            "so broken",
             "so slow",
             "so fast",
-            "so hard to use",
             "in everything",
-            "so bad",
             "in my fridge",
+            "so hard to use",
             "soft"
         ];
         var container = document.querySelector('.masthead h1 .completion');
-        var index = 0;
+        var index = Math.round(Math.random() * (completions.length - 1));
         var swap = function () {
             container.innerText = completions[index] + "?";
             index = (index + 1) % completions.length;
