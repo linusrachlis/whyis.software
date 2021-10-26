@@ -65,6 +65,7 @@ on my [personal website](https://linus.rachlis.net) and share some code on
             "so fast",
             "in everything",
             "in my fridge",
+            "mandatory",
             "so hard to use",
             "soft"
         ];

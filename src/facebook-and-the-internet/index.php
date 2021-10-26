@@ -1,4 +1,4 @@
-<?php T::head() ?>
+<?php T::head("Facebook's outage and the Internet") ?>
 
     <header class=article>
         <h1><a href="/">Why is software?</a></h1>
