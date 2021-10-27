@@ -317,8 +317,7 @@ further reading, here's what to look up:
 -   Read about the [2008 Pakistan/YouTube
     incident](https://www.cnet.com/news/how-pakistan-knocked-youtube-offline-and-how-to-make-sure-it-never-happens-again/)
 
-Addenda
--------
+### Addenda
 
 -   actually, not all facebook's routes stopped being advertised, just
     the ones for their DNS servers :D [Why was Facebook down for five
