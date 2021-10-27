@@ -1,62 +1,64 @@
-$body-font-size: 17px;
+$main-font-family: 'Roboto', sans-serif;
+$header-font-family: 'JetBrains Mono', monospace;
+$base-font-size: 17px;
 $body-bgcolor: white;
-$body-text-color: black;
-$body-link-color: #246;
-$body-link-color-active: #646;
-$body-link-bgcolor: #def;
-$body-link-bgcolor-active: #fef;
+$text-color: black;
+$link-color: #246;
+$link-color-active: #646;
+$link-bgcolor: #def;
+$link-bgcolor-active: #fef;
 
 html {
-    font: $body-font-size/1.5 'Roboto', sans-serif;
+    font: $base-font-size/1.5 $main-font-family;
 
-    @media (min-width: ($body-font-size * 39)) {
+    @media (min-width: ($base-font-size * 39)) {
         font-size: 20px;
     }
 }
 
 body {
-    margin: $body-font-size;
+    margin: $base-font-size;
     background-color: $body-bgcolor;
-    color: $body-text-color;
-    max-width: ($body-font-size * 39);
+    color: $text-color;
+    max-width: ($base-font-size * 39);
 
-    @media (min-width: ($body-font-size * 42)) {
-        margin: $body-font-size auto;
+    @media (min-width: ($base-font-size * 42)) {
+        margin: $base-font-size auto;
     }
 }
 
 a {
-    color: $body-link-color;
+    color: $link-color;
 
     &:link, &:active {
-        color: $body-link-color;
+        color: $link-color;
     }
 
     &:active, &:hover {
-        color: $body-link-color-active;
+        color: $link-color-active;
     }
 }
 
 .body-text a {
-    background-color: $body-link-bgcolor;
+    background-color: $link-bgcolor;
     padding: .1em .2em;
     border-radius: .2em;
 
     &:link, &:active {
-        background-color: $body-link-bgcolor;
+        background-color: $link-bgcolor;
     }
 
     &:active, &:hover {
-        background: linear-gradient($body-link-bgcolor, $body-link-bgcolor-active);
+        background: linear-gradient($link-bgcolor, $link-bgcolor-active);
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $header-font-family;
     line-height: 1.2;
 }
 h1 { font-size: 1.8rem; }
-h2 { font-size: 1.4rem; }
+h2 { font-size: 1.3rem; }
 h3 { font-size: 1rem; }
 h4 { font-size: .8rem; }
 
@@ -71,7 +73,7 @@ h4 { font-size: .8rem; }
 
 header.masthead {
     h1 {
-        background-color: $body-link-bgcolor;
+        background-color: $link-bgcolor;
         padding: .5em;
 
         .cursor {
@@ -83,32 +85,38 @@ header.masthead {
         max-width: 17em;
         margin: 1em auto;
         text-align: center;
-        font-family: 'JetBrains Mono', monospace;
+        font-family: $header-font-family;
     }
 }
 
 header.article {
-    h1 {
+    .home {
+        font-family: $header-font-family;
         font-size: 1rem;
-        background-color: $body-link-bgcolor-active;
+        background-color: $link-bgcolor;
         padding: .5em;
-        margin: ($body-font-size * -1) ($body-font-size * -1) 0 ($body-font-size * -1);
+        margin: ($base-font-size * -1) ($base-font-size * -1) 0 ($base-font-size * -1);
+        width: 50%;
     }
 }
 
 h2, h3, h4, h5, h6 {
-    background: linear-gradient($body-bgcolor, $body-link-bgcolor);
+    background: linear-gradient($body-bgcolor, $link-bgcolor);
     padding: .5em;
+}
+
+@mixin article-title {
+    background: $link-bgcolor-active;
+    border-radius: 0 1em 1em 1em;
+    padding: 1em;
 }
 
 .article-previews {
     a {
         display: block;
-        background: $body-link-bgcolor-active;
-        border-radius: 0 1em 1em 1em;
-        padding: 1em;
-        color: $body-link-color;
+        color: $link-color;
         margin: 1em 1em 1em 0;
+        @include article-title;
 
         &:nth-child(even) {
             border-radius: 1em 0 1em 1em;
@@ -117,13 +125,18 @@ h2, h3, h4, h5, h6 {
         }
 
         &:link, &:active {
-            color: $body-link-color;
-            background: $body-link-bgcolor-active;
+            color: $link-color;
+            background: $link-bgcolor-active;
         }
 
         &:active, &:hover {
-            color: $body-link-color-active;
-            background: linear-gradient($body-link-bgcolor, $body-link-bgcolor-active);
+            color: $link-color-active;
+            background: linear-gradient($link-bgcolor, $link-bgcolor-active);
         }
     }
+}
+
+article h1 {
+    @include article-title;
+    font-family: $main-font-family;
 }

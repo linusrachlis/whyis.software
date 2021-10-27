@@ -1,15 +1,14 @@
 <?php T::head("Facebook's outage and the Internet") ?>
 
     <header class=article>
-        <h1><a href="/">Why is software?</a></h1>
+        <div class=home><a href="/">Why is software?</a></div>
     </header>
 
     <article class=body-text>
-        <h2>
-            Facebook's outage: what happened, and what is the Internet
-            anyway?
-        </h2>
         <?php T::markdown_begin() ?>
+
+Facebook's outage: what happened, and what is the Internet anyway?
+==================================================================
 
 Is the Internet a series of tubes? What really happens when you connect
 to Facebook, or any other website? Does the signal have to go to space?
@@ -35,7 +34,8 @@ tubing was already ridiculous pre-Internet. Just think of the power
 grid. Or, for that matter, telephone and TV cables, on which the
 Internet began its mainstream existence.
 
-### Anyway, so what happened to Facebook on October 4? Did somebody cut their tube?
+Anyway, so what happened to Facebook on October 4? Did somebody cut their tube?
+-------------------------------------------------------------------------------
 
 No, but let's back up to a different question first. If it's tubes all
 the way down, that sounds like a mess. You might have this image of a
@@ -64,7 +64,8 @@ take the third left, then two rights, and straight on until morning.
 Signals know nothing; they just propagate through the wire. The journey
 is taken in smaller steps.
 
-### How to get to Facebook: well, they have their own highway exit
+How to get to Facebook: well, they have their own highway exit
+--------------------------------------------------------------
 
 The first couple of steps are no-brainers. When your computer wants to
 talk to *anything* on the Internet, the first step is always the same,
@@ -92,7 +93,8 @@ forwards your signal into the "Facebook" cable, and what happens from
 there is up to Facebook's network engineers. Your signal is now in
 Facebook's network.
 
-### Something more adventurous
+Something more adventurous
+--------------------------
 
 So the Facebook example is actually not great for explaining the
 Internet in general. What does it look like when the decision is less
@@ -151,7 +153,8 @@ some data for 1029384756." When the signal gets back to the Indian ISP,
 their router will know which cable to put signals on that are bound for
 '102' numbers, and the whole process will go in reverse.
 
-### Okay, I promise this is relevant to what happened to Facebook.
+Okay, I promise this is relevant to what happened to Facebook.
+--------------------------------------------------------------
 
 If you're thinking that this sounds a lot like how phone numbers have
 country codes and area codes, and is even reminiscent of how mailing
@@ -194,7 +197,8 @@ the small town router notices *that*, and *it* can now use cable 5 again
 for '123' numbers. This adaptive resilience is the Internet's greatest
 strength -- but it also gets complicated.
 
-### Finally, the problem
+Finally, the problem
+--------------------
 
 If you run a network that's part of the Internet -- like Rogers, Bell,
 or indeed, Facebook -- your routers not only advertise whether or not
@@ -292,7 +296,8 @@ customers go for commodities than a network where equals exchange
 information. But to me, it's unclear how far that evolution can really
 go, since it goes against the Internet's deeper nature.
 
-### Notes
+Notes
+-----
 
 I intentionally avoided technical jargon in the above, but if you want
 further reading, here's what to look up:
@@ -312,7 +317,8 @@ further reading, here's what to look up:
 -   Read about the [2008 Pakistan/YouTube
     incident](https://www.cnet.com/news/how-pakistan-knocked-youtube-offline-and-how-to-make-sure-it-never-happens-again/)
 
-### Addenda
+Addenda
+-------
 
 -   actually, not all facebook's routes stopped being advertised, just
     the ones for their DNS servers :D [Why was Facebook down for five
