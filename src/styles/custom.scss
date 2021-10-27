@@ -1,5 +1,6 @@
 $main-font-family: 'Roboto', sans-serif;
-$header-font-family: 'JetBrains Mono', monospace;
+$code-font-family: 'JetBrains Mono', monospace;
+$header-font-family: $code-font-family;
 $base-font-size: 17px;
 $body-bgcolor: white;
 $text-color: black;
@@ -45,17 +46,54 @@ a {
     }
 }
 
-.body-text a {
-    background-color: $link-bgcolor;
-    padding: .1em .2em;
-    border-radius: .2em;
-
-    &:link, &:active {
+.body-text {
+    a {
         background-color: $link-bgcolor;
+        padding: .1em .2em;
+        border-radius: .2em;
+
+        &:link, &:active {
+            background-color: $link-bgcolor;
+        }
+
+        &:active, &:hover {
+            background: linear-gradient($link-bgcolor, $link-bgcolor-active);
+        }
     }
 
-    &:active, &:hover {
-        background: linear-gradient($link-bgcolor, $link-bgcolor-active);
+    code {
+        font-family: $code-font-family;
+        font-size: 90%;
+        background-color: #eee;
+        padding: .1em .2em;
+        border-radius: .2em;
+    }
+
+    blockquote {
+        background-color: $link-bgcolor;
+        color: darken($link-bgcolor, 80%);
+        border-radius: 1.5em 1.5em 0 1.5em;
+        padding: 1em;
+        margin: 1em 0 1em 2em;
+        font-size: 90%;
+
+        p:first-child { margin-top: 0; }
+        p:last-child { margin-bottom: 0; }
+    }
+
+    aside {
+        background-color: $link-bgcolor;
+        color: darken($link-bgcolor, 80%);
+        border-radius: 1.5em 0 1.5em 1.5em;
+        padding: 1em;
+        margin: 1em 0 1em 2em;
+        font-size: 90%;
+
+        @include desktop-layout {
+            float: right;
+            width: 50%;
+            margin: 1em 0 1em 1em;
+        }
     }
 }
 
@@ -65,7 +103,7 @@ h1, h2, h3 {
 }
 h1 { font-size: 1.5rem; }
 h2 { font-size: 1.1rem; }
-h3 { font-size: .8rem; }
+h3 { font-size: .9rem; }
 
 @keyframes blink {
     0% { opacity: 0.0; }
@@ -152,20 +190,5 @@ article {
     h1 {
         @include article-title;
         font-family: $main-font-family;
-    }
-
-    aside {
-        background-color: $link-bgcolor;
-        color: darken($link-bgcolor, 80%);
-        border-radius: 1.5em 0 1.5em 1.5em;
-        padding: 1em;
-        margin: 1em 0 1em 2em;
-        font-size: 90%;
-
-        @include desktop-layout {
-            float: right;
-            width: 50%;
-            margin: 1em 0 1em 1em;
-        }
     }
 }
