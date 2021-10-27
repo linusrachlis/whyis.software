@@ -220,12 +220,17 @@ stop advertising that it can handle anything. Due to the natural
 resilience of the Internet, signals should simply take another path in
 the meantime. Facebook's network has enough redundancy for this.
 
-But, oops. The new configuration had a mistake that somehow cascaded
-through Facebook's network. One router would stop advertising the
-ability to reach *anything*, and the next router would notice that,
-dutifully stop its *own* advertising, and so on. Probably within
-seconds, this cascade made it out to all the entry points of Facebook's
-entire network.
+But, oops. The new configuration had a mistake that somehow cascaded through
+Facebook's network. One router would stop advertising the ability to reach
+*anything*, and the next router would notice that, dutifully stop its *own*
+advertising, and so on. Probably within seconds, this cascade made it out to
+all the entry points of Facebook's entire network.
+
+<aside>
+Okay, technically most of their network was still reachable, but a particular
+service went down that made the entire thing effectively unreachable. See the
+notes section if you care.
+</aside>
 
 For example, just like we made up that '123' numbers are reserved for
 India, let's say Facebook owns all computer numbers starting with

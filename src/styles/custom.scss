@@ -16,13 +16,19 @@ html {
     }
 }
 
+@mixin desktop-layout {
+    @media (min-width: ($base-font-size * 42)) {
+        @content;
+    }
+}
+
 body {
     margin: $base-font-size;
     background-color: $body-bgcolor;
     color: $text-color;
     max-width: ($base-font-size * 39);
 
-    @media (min-width: ($base-font-size * 42)) {
+    @include desktop-layout {
         margin: $base-font-size auto;
     }
 }
@@ -106,14 +112,14 @@ footer.article {
     }
 }
 
-h2 {
+h2, h3 {
     background: linear-gradient($body-bgcolor, $link-bgcolor);
     padding: .5em;
 }
 
 @mixin article-title {
     background: $link-bgcolor-active;
-    border-radius: 0 1em 1em 1em;
+    border-radius: 0 1.5em 1.5em 1.5em;
     padding: 1em;
 }
 
@@ -142,7 +148,24 @@ h2 {
     }
 }
 
-article h1 {
-    @include article-title;
-    font-family: $main-font-family;
+article {
+    h1 {
+        @include article-title;
+        font-family: $main-font-family;
+    }
+
+    aside {
+        background-color: $link-bgcolor;
+        color: darken($link-bgcolor, 80%);
+        border-radius: 1.5em 0 1.5em 1.5em;
+        padding: 1em;
+        margin: 1em 0 1em 2em;
+        font-size: 90%;
+
+        @include desktop-layout {
+            float: right;
+            width: 50%;
+            margin: 1em 0 1em 1em;
+        }
+    }
 }
