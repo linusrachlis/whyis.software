@@ -316,19 +316,44 @@ further reading, here's what to look up:
 -   <a href="https://en.wikipedia.org/wiki/Border_Gateway_Protocol">Border
     Gateway Protocol</a>:
     The system for routers to advertise what addresses they can handle
+-   Read about the [2008 Pakistan/YouTube
+    incident](https://www.cnet.com/news/how-pakistan-knocked-youtube-offline-and-how-to-make-sure-it-never-happens-again/)
 -   I used the word "signal" a lot, but data actually travels over a
     network in discrete chunks called
     [packets](https://en.wikipedia.org/wiki/Network_packet).
--   Read about the [2008 Pakistan/YouTube
-    incident](https://www.cnet.com/news/how-pakistan-knocked-youtube-offline-and-how-to-make-sure-it-never-happens-again/)
 
-### Addenda
+### The "Entire Network" Thing
 
--   actually, not all facebook's routes stopped being advertised, just
-    the ones for their DNS servers :D [Why was Facebook down for five
-    hours?](https://www.youtube.com/watch?v=-wMU8vmfaYo&amp;list=WL&amp;index=3)
-    near the end of the video he shows a spreadsheet of routes he
-    saved during the outage
+Facebook didn't actually stop advertising _all_ its routes, just the routes to
+its [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System)
+servers. This made it effectively unreachable because when you browse Facebook
+or Instagram, you aren't actually connecting to `facebook.com` or
+`instagram.com`; you are only ever connecting to a number (AKA an IP address).
+In other words, "Here's some data for Facebook" is not actually what your
+computer says to your router; it says, "Here's some data for 55592837458." And
+it knows that number because it previously asked a DNS server the number for
+facebook.com.
+
+But wait ... that just pushes back the problem one step, right? How was your
+computer able to talk to the DNS server? You can probably guess. It has _its
+own_ number, and is reachable in just the same way as Facebook itself. So
+before anything else happens, your computer first says to your router, "What's
+the number for `facebook.com`?" Your router only knows to ask your ISP. Your
+ISP may or may not be directly plugged into Facebook's network, but this
+request keeps sniffing along from router to router, only ever having to know
+the next step to reach someone advertising the ability to who can tell it the
+number for `facebook.com`.
+
+(This is not actually as simple a question as it sounds, since you will get
+different answers depending what part of the world you're in, or what kind of
+maintenance Facebook is currently doing, etc.)
+
+And if they made a mistake and it turned out _no one_ was advertising the
+ability to give the number for `facebook.com` ... well then, it wouldn't matter
+if they were still advertising that they can reach `55592837458`, because your
+computer wouldn't have known to send data there in the first place. See this
+video for an excellent, and more technical, explainer: [Why was Facebook down
+for five hours?](https://www.youtube.com/watch?v=-wMU8vmfaYo)
 
         <?php T::markdown_end() ?>
 
