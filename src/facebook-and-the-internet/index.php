@@ -228,8 +228,8 @@ all the entry points of Facebook's entire network.
 
 <aside>
 Okay, technically most of their network was still reachable, but a particular
-service went down that made the entire thing effectively unreachable. See the
-notes section if you care.
+part of it went down that made the entire thing effectively unreachable. I'll
+explain more in the notes section.
 </aside>
 
 For example, just like we made up that '123' numbers are reserved for
@@ -324,15 +324,24 @@ further reading, here's what to look up:
 
 ### The "Entire Network" Thing
 
-Facebook didn't actually stop advertising _all_ its routes, just the routes to
-its [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System)
-servers. This made it effectively unreachable because when you browse Facebook
-or Instagram, you aren't actually connecting to `facebook.com` or
-`instagram.com`; you are only ever connecting to a number (AKA an IP address).
-In other words, "Here's some data for Facebook" is not actually what your
-computer says to your router; it says, "Here's some data for 55592837458." And
-it knows that number because it previously asked a DNS server the number for
-facebook.com.
+Okay, remember when I said,
+
+> One router would stop advertising the ability to reach *anything*, and the next
+> router would notice that, dutifully stop its *own* advertising, and so on.
+> Probably within seconds, this cascade made it out to all the entry points of
+> Facebook's entire network.
+
+Well, Facebook didn't actually stop advertising _all_ its routes, just the
+routes to its [Domain Name
+System](https://en.wikipedia.org/wiki/Domain_Name_System) servers, which made
+it _effectively_ unreachable. Why?
+
+When you browse Facebook or Instagram, you aren't actually connecting to
+`facebook.com` or `instagram.com`; you are only ever connecting to a number
+(AKA an IP address). In other words, "Here's some data for Facebook" is not
+actually what your computer says to your router; it says, "Here's some data for
+`55592837458`." And it knows that number because it previously asked a DNS
+server the number for `facebook.com`.
 
 But wait ... that just pushes back the problem one step, right? How was your
 computer able to talk to the DNS server? You can probably guess. It has _its
@@ -341,16 +350,17 @@ before anything else happens, your computer first says to your router, "What's
 the number for `facebook.com`?" Your router only knows to ask your ISP. Your
 ISP may or may not be directly plugged into Facebook's network, but this
 request keeps sniffing along from router to router, only ever having to know
-the next step to reach someone advertising the ability to who can tell it the
-number for `facebook.com`.
+the next step to reach someone advertising the ability to tell it the number
+for `facebook.com`.
 
-(This is not actually as simple a question as it sounds, since you will get
+This is not actually as simple a question as it sounds, since you will get
 different answers depending what part of the world you're in, or what kind of
-maintenance Facebook is currently doing, etc.)
+maintenance Facebook is currently doing, and how they think your request will
+best be routed.
 
-And if they made a mistake and it turned out _no one_ was advertising the
+And if they made a mistake, and it turned out _no one_ was advertising the
 ability to give the number for `facebook.com` ... well then, it wouldn't matter
-if they were still advertising that they can reach `55592837458`, because your
+who was still advertising that they can reach `55592837458`, because your
 computer wouldn't have known to send data there in the first place. See this
 video for an excellent, and more technical, explainer: [Why was Facebook down
 for five hours?](https://www.youtube.com/watch?v=-wMU8vmfaYo)
