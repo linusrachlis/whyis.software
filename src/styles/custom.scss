@@ -85,14 +85,24 @@ header.masthead {
     }
 }
 
+@mixin home-link {
+    font-family: $header-font-family;
+    font-size: 1rem;
+    background-color: $link-bgcolor;
+    padding: .5em;
+    width: 50%;
+}
+
 header.article {
     .home {
-        font-family: $header-font-family;
-        font-size: 1rem;
-        background-color: $link-bgcolor;
-        padding: .5em;
+        @include home-link;
         margin: ($base-font-size * -1) ($base-font-size * -1) 0 ($base-font-size * -1);
-        width: 50%;
+    }
+}
+footer.article {
+    .home {
+        @include home-link;
+        margin: 0 ($base-font-size * -1) ($base-font-size * -1) ($base-font-size * -1);
     }
 }
 

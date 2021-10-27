@@ -329,5 +329,9 @@ Addenda
         <?php T::markdown_end() ?>
 
     </article>
+
+    <footer class=article>
+        <div class=home><a href="/">Why is software?</a></div>
+    </footer>
 <?php
 T::foot(false);
