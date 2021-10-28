@@ -27,6 +27,10 @@ foreach ($pages as $page) {
     file_put_contents($output_path, $output);
 }
 
+foreach ($content_images as $content_image) {
+    copy("$src_dir/$content_image", "$dist_dir/$content_image");
+}
+
 $css_code = '';
 foreach ($css_files as $css_file) {
     $css_code .= file_get_contents("$src_dir/styles/$css_file.css") . PHP_EOL;

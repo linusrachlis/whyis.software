@@ -26,6 +26,18 @@ class T {
         return $output;
     }
 
+    function content_image($alt_text, $src_path) {
+        T::markdown_end();
+?>
+<p class=content-image>
+    <img
+        src="/<?= htmlspecialchars($src_path) ?>"
+        alt="<?= htmlspecialchars($alt_text) ?>">
+</p>
+<?php
+        T::markdown_begin();
+    }
+
     function head($title = null) {
         ?>
 <!DOCTYPE html>

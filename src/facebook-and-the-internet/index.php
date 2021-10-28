@@ -10,6 +10,15 @@
 Facebook's outage: what happened, and what is the Internet anyway?
 ==================================================================
 
+<?php
+
+T::content_image(
+    "A computer showing a browser window with \"facebook.com\" in the address bar, and an error message, \"This site can't be reached.\"",
+    'facebook-and-the-internet/website-down.jpg'
+);
+
+?>
+
 Is the Internet a series of tubes? What really happens when you connect
 to Facebook, or any other website? Does the signal have to go to space?
 Is that why some things are called "the cloud?" Somewhere out there,

@@ -95,6 +95,11 @@ a {
             margin: 1em 0 1em 1em;
         }
     }
+
+    .content-image {
+        margin: 1em ($base-font-size * -1);
+        img { max-width: 100%; }
+    }
 }
 
 h1, h2, h3 {

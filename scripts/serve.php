@@ -37,7 +37,7 @@ if (preg_match('/\/style\.css(\?.*)?$/', $request_uri)) {
     exit;
 }
 
-// If I end up serving other static assets, you can apparently return
-// false to serve the file as-is.
-
-header('HTTP/1.1 404 File Not Found');
+// Serve a file as-is if it exists, or 404 if not.
+// NOTE: PHP's working directory must be 'src'. Merely setting docroot to 'src'
+// won't work, counter-intuitively.
+return false;
