@@ -1,0 +1,4 @@
+#!/bin/bash
+pushd src
+php -S 0.0.0.0:1337 ../scripts/serve.php
+popd
