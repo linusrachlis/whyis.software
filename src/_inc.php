@@ -1,10 +1,15 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Michelf\Markdown, Michelf\SmartyPants;
 
 class T {
+    static $content_image_widths = [
+        380,
+        697
+    ];
+
     function markdown_begin() {
         ob_start();
     }
@@ -26,12 +31,72 @@ class T {
         return $output;
     }
 
+    function build_image($src_dir, $base_path, $ext, $dst_width, $save_dir) {
+        // NOTE: only jpgs for now
+        $src_filename = "$src_dir/$base_path.$ext";
+        $src_image = imagecreatefromjpeg($src_filename);
+        if (!$src_image) {
+            exit("Couldn't load file: $src_filename");
+        }
+        $src_width = imagesx($src_image);
+        $src_height = imagesy($src_image);
+        $dst_height = $src_height * ($dst_width / $src_width);
+        $dst_image = imagecreatetruecolor($dst_width, $dst_height);
+        imagecopyresampled(
+            $dst_image,
+            $src_image,
+            0,
+            0,
+            0,
+            0,
+            $dst_width,
+            $dst_height,
+            $src_width,
+            $src_height
+        );
+        // NOTE: doesn't save to file ever currently
+        if (isset($save_dir)) {
+            $dest_filename = "$save_dir/$base_path-$dst_width.$ext";
+        } else {
+            $dest_filename = null;
+        }
+        imagejpeg($dst_image, $dest_filename, 85);
+    }
+
     function content_image($alt_text, $src_path) {
         T::markdown_end();
+
+        $pathinfo = pathinfo($src_path);
+        $srcset_list = [];
+        $sizes_list = [];
+        $num_sizes = count(T::$content_image_widths);
+
+        foreach (T::$content_image_widths as $i => $w) {
+            // NOTE: the last one of these will be used as the default 'src'
+            $url_for_size = htmlspecialchars(
+                '/' . $pathinfo['dirname'] . '/'
+                . $pathinfo['filename']
+                . "-$w."
+                . $pathinfo['extension']
+            );
+            $srcset_list[] = "$url_for_size ${w}w";
+
+            $sizes_list[] = (
+                (
+                    // If we're on the last size, no media query
+                    ($i+1 == $num_sizes)
+                    ? ''
+                    : "(max-width: ${w}px) "
+                )
+                . "${w}px"
+            );
+        }
 ?>
 <p class=content-image>
     <img
-        src="/<?= htmlspecialchars($src_path) ?>"
+        srcset="<?= htmlspecialchars(implode(', ', $srcset_list)) ?>"
+        sizes="<?= htmlspecialchars(implode(', ', $sizes_list)) ?>"
+        src="<?= htmlspecialchars($url_for_size) ?>"
         alt="<?= htmlspecialchars($alt_text) ?>">
 </p>
 <?php

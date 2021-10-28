@@ -6,7 +6,7 @@ $pages = [
 ];
 
 $content_images = [
-    'facebook-and-the-internet/website-down.jpg',
+    ['facebook-and-the-internet/website-down', 'jpg'],
 ];
 
 $css_files = [

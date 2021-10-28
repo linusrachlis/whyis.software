@@ -1,7 +1,8 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/config.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/config.php';
+require_once "$src_dir/_inc.php";
 
 use ScssPhp\ScssPhp\Compiler;
 
@@ -13,7 +14,6 @@ if (!is_dir($dist_dir)) {
     mkdir($dist_dir);
 }
 
-require "$src_dir/_inc.php";
 
 foreach ($pages as $page) {
     ob_start();
@@ -28,7 +28,15 @@ foreach ($pages as $page) {
 }
 
 foreach ($content_images as $content_image) {
-    copy("$src_dir/$content_image", "$dist_dir/$content_image");
+    foreach (T::$content_image_widths as $width) {
+        T::build_image(
+            $src_dir,
+            $content_image[0],
+            $content_image[1],
+            $width,
+            $dist_dir
+        );
+    }
 }
 
 $css_code = '';
