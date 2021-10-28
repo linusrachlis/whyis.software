@@ -63,7 +63,7 @@ class T {
         imagejpeg($dst_image, $dest_filename, 85);
     }
 
-    function content_image($alt_text, $src_path) {
+    function content_image($alt_text, $src_path, $caption = null) {
         T::markdown_end();
 
         $pathinfo = pathinfo($src_path);
@@ -92,13 +92,20 @@ class T {
             );
         }
 ?>
-<p class=content-image>
+<figure class=content-image>
     <img
         srcset="<?= htmlspecialchars(implode(', ', $srcset_list)) ?>"
         sizes="<?= htmlspecialchars(implode(', ', $sizes_list)) ?>"
         src="<?= htmlspecialchars($url_for_size) ?>"
         alt="<?= htmlspecialchars($alt_text) ?>">
-</p>
+<?php
+        if (isset($caption)) {
+?>
+    <figcaption><?= T::markdown_to_html($caption) ?></figcaption>
+<?php
+        }
+?>
+</figure>
 <?php
         T::markdown_begin();
     }

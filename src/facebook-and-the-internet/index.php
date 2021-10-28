@@ -92,6 +92,21 @@ It's received some data bound for Facebook on one of its cables. It has
 a bunch of other cables coming out, which are connected to other
 routers. Which one leads to Facebook?
 
+<?php
+
+T::content_image(
+    "",
+    'facebook-and-the-internet/cable-hub.jpg',
+    <<<EOT
+A neighbourhood cable hub, so ubiquitous you might never have really noticed
+one, but you certainly will from now on. The cables leading out of several
+nearby houses meet in an enclosure like this one, providing easy maintenance
+access.
+EOT
+);
+
+?>
+
 Actually, in Facebook's case, this is probably a simple decision. Like I
 said, Facebook has a huge network of their own; they probably run more
 of their own cable than many telecom companies. If you live in a major
@@ -309,6 +324,12 @@ evolved, and for most regular people, it looks more like a place where
 customers go for commodities than a network where equals exchange
 information. But to me, it's unclear how far that evolution can really
 go, since it goes against the Internet's deeper nature.
+
+<?php T::content_image(
+    "The night side of Earth seen from space, with clusters of city lights visible",
+    'facebook-and-the-internet/earth-at-night.jpg',
+    "Photo by [NASA](https://unsplash.com/photos/Q1p7bh3SHj8) on [Unsplash](https://unsplash.com/)"
+) ?>
 
 Notes
 -----
