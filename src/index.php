@@ -63,6 +63,7 @@ on my [personal website](https://linus.rachlis.net) and share some code on
             "so broken",
             "so slow",
             "so fast",
+            "so addictive",
             "in everything",
             "in my fridge",
             "mandatory",
