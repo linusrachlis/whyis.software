@@ -147,6 +147,15 @@ can't take the signal where it needs to go. They usually have to pay to
 connect to an exchange. What is an exchange, really? A whole bunch of
 routers! Also, so many tubes.
 
+<?php T::content_image(
+    "",
+    'facebook-and-the-internet/network-switch.jpg',
+    <<<EOT
+Several network switches (AKA routers) interconnected in a rack. When your
+signal gets handed off at an Internet exchange, it looks something like this.
+EOT
+) ?>
+
 But wait, how did Rogers know to send your signal to the exchange? Were
 they just hoping for the best? No, it's because *another* Internet
 company on that exchange -- let's call them Coast2Coast -- had their
