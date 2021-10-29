@@ -98,10 +98,12 @@ T::content_image(
     "",
     'facebook-and-the-internet/cable-hub.jpg',
     <<<EOT
-A neighbourhood cable hub, so ubiquitous you might never have really noticed
-one, but you certainly will from now on. The cables leading out of several
-nearby houses meet in an enclosure like this one, providing easy maintenance
-access.
+The brown plastic tower sitting about 1m high in someone's front yard is a
+neighbourhood cable hub. They're so ubiquitous as to go unnoticed, though you
+may no longer be able to ignore them after reading this. The cables from all
+the nearby houses either tunnel underground or join the overhead wires, before
+merging their signals together in an enclosure like this one, affording
+maintenance access.
 EOT
 );
 

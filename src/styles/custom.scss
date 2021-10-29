@@ -121,7 +121,7 @@ a {
         img { max-width: 100%; }
 
         figcaption {
-            margin: 0;
+            margin: 0 1em;
             border-radius: 0 0 1.5em 1.5em;
             background-color: $link-bgcolor;
             padding: .1px 1em;
@@ -129,6 +129,11 @@ a {
             color: darken($link-bgcolor, 80%);
 
             @include normal-links;
+
+            @include desktop-layout {
+                // Go flush to image border
+                margin: 0;
+            }
         }
     }
 }
