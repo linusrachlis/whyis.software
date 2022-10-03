@@ -125,7 +125,7 @@ class T {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css" class="site-styles">
-<? if (DEV_MODE) { ?>
+<?php if (DEV_MODE) { ?>
     <script>
         window.addEventListener('load', () => {
             const links = document.getElementsByClassName('site-styles');
@@ -143,7 +143,7 @@ class T {
             setInterval(reloadSiteStyles, 1000);
         })
     </script>
-<? } ?>
+<?php } ?>
 </head>
 
 <body>
