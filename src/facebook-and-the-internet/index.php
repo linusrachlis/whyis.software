@@ -1,11 +1,7 @@
-<?php T::head("Facebook's outage and the Internet") ?>
-
-    <header class=article>
-        <div class=home><a href="/">Why is software?</a></div>
-    </header>
-
-    <article class=body-text>
-        <?php T::markdown_begin() ?>
+<?php
+T::article_head("Facebook's outage and the Internet");
+T::markdown_begin();
+?>
 
 Facebook's outage: what happened, and what is the Internet anyway?
 ==================================================================
@@ -406,12 +402,6 @@ computer wouldn't have known to send data there in the first place. See this
 video for an excellent, and more technical, explainer: [Why was Facebook down
 for five hours?](https://www.youtube.com/watch?v=-wMU8vmfaYo)
 
-        <?php T::markdown_end() ?>
-
-    </article>
-
-    <footer class=article>
-        <div class=home><a href="/">Why is software?</a></div>
-    </footer>
 <?php
-T::foot(false);
+T::markdown_end();
+T::article_foot();

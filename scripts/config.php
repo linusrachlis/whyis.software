@@ -3,6 +3,7 @@
 $pages = [
     'index',
     'facebook-and-the-internet/index',
+    'cookies-and-consent/index',
 ];
 
 $content_images = [

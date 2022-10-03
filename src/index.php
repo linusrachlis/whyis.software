@@ -26,6 +26,9 @@
             Facebook's outage: what happened, and what is the Internet
             anyway?
         </a>
+        <a href="/cookies-and-consent/">
+            What are cookies, and why does every website make me agree to them?
+        </a>
         <a href="mailto:ask@whyis.software">
             Email me more questions
         </a>

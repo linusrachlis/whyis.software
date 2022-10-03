@@ -150,11 +150,33 @@ class T {
         <?php
     }
 
+    function article_head($title) {
+        self::head($title);
+?>
+    <header class=article>
+        <div class=home><a href="/">Why is software?</a></div>
+    </header>
+
+    <article class=body-text>
+<?php
+    }
+
     function foot() {
         ?>
     </body>
 
 </html>
         <?php
+    }
+
+    function article_foot() {
+?>
+    </article>
+
+    <footer class=article>
+        <div class=home><a href="/">Why is software?</a></div>
+    </footer>
+<?php
+        self::foot();
     }
 }
