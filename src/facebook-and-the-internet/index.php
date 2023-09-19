@@ -7,8 +7,8 @@
     <article class=body-text>
         <?php T::markdown_begin() ?>
 
-Facebook's outage: what happened, and what is the Internet anyway?
-==================================================================
+What happened to Facebook on October 4, 2021 -- and what is the Internet anyway?
+================================================================================
 
 <?php
 
