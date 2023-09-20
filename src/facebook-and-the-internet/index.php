@@ -311,7 +311,7 @@ was also being used for gunpowder storage. Sure, you can screw up
 lighting candles and you might burn yourself or ruin the cake. But
 eventually, the inevitable explosion happens, and it wasn't the fault of
 whoever was lighting the candles that day. Why was all the gunpowder
-stored there? That sounds a miscommunication, a gap in process, a
+stored there? That sounds like a miscommunication, a gap in process, a
 leadership issue, etc.
 
 The Internet is a crazy concept, and what makes it crazy is that it's
